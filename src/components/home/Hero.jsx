@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import {useTypingEffect} from "../../hooks/useTypingEffect";
+import profileImage from "../../../public/images/profile.jpg";
 
 function Hero() {
   const {displayedText, showCursor, isComplete} = useTypingEffect("손민석입니다", 100);
@@ -23,43 +24,43 @@ function Hero() {
             </Greeting>
 
             {isComplete && (
-              <>
-                <Title
-                    as={motion.h1}
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.5}}
-                >
-                  구조와 판단을 고민하는
-                  <br/>
-                  프론트엔드 개발자입니다
-                </Title>
+                <>
+                  <Title
+                      as={motion.h1}
+                      initial={{opacity: 0, y: 20}}
+                      animate={{opacity: 1, y: 0}}
+                      transition={{duration: 0.5}}
+                  >
+                    구조와 판단을 고민하는
+                    <br/>
+                    프론트엔드 개발자입니다
+                  </Title>
 
-                <Description
-                    as={motion.p}
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.5, delay: 0.2}}
-                >
-                  단순히 기능을 구현하는 것을 넘어, <strong>왜 이렇게 설계했는지</strong>를 설명할 수 있는 개발자가 되고자 합니다.
-                  유지보수 가능한 코드와 확장 가능한 구조를 만들기 위해 고민합니다.
-                </Description>
+                  <Description
+                      as={motion.p}
+                      initial={{opacity: 0, y: 20}}
+                      animate={{opacity: 1, y: 0}}
+                      transition={{duration: 0.5, delay: 0.2}}
+                  >
+                    단순히 기능을 구현하는 것을 넘어, <strong>왜 이렇게 설계했는지</strong>를 설명할 수 있는 개발자가 되고자 합니다.
+                    유지보수 가능한 코드와 확장 가능한 구조를 만들기 위해 고민합니다.
+                  </Description>
 
-                <TagList
-                    as={motion.div}
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 0.5, delay: 0.4}}
-                >
-                  <Tag>React</Tag>
-                  <Tag>Vue 3</Tag>
-                  <Tag>TypeScript</Tag>
-                  <Tag>NodeJS</Tag>
-                  <Tag>Python</Tag>
-                  <Tag>Fast API</Tag>
-                  <Tag>MySQL</Tag>
-                </TagList>
-              </>
+                  <TagList
+                      as={motion.div}
+                      initial={{opacity: 0, y: 20}}
+                      animate={{opacity: 1, y: 0}}
+                      transition={{duration: 0.5, delay: 0.4}}
+                  >
+                    <Tag>React</Tag>
+                    <Tag>Vue 3</Tag>
+                    <Tag>TypeScript</Tag>
+                    <Tag>NodeJS</Tag>
+                    <Tag>Python</Tag>
+                    <Tag>Fast API</Tag>
+                    <Tag>MySQL</Tag>
+                  </TagList>
+                </>
             )}
           </ContentWrapper>
 
@@ -69,7 +70,7 @@ function Hero() {
               animate={{opacity: 1, x: 0}}
               transition={{duration: 0.6, delay: 0.2}}
           >
-            <ProfileImage src="/images/profile.jpg" alt="Profile"/>
+            <ProfileImage src={profileImage} alt="Profile"/>
           </ImageWrapper>
         </Container>
       </Section>

@@ -3,7 +3,7 @@ export const projects = [
     id: "omc-admin",
     title: "오마이컴퍼니 Admin 리뉴얼",
     summary: "운영 중인 관리자 페이지의 UI/UX와 코드 구조를 개선한 프로젝트",
-    thumbnail: "/images/omc-admin.png",
+    thumbnail: "./images/omc-admin.png",
     period: "2025.06 - 2025.11",
     team: "프론트엔드 2명",
 
@@ -49,7 +49,7 @@ export const projects = [
     id: "omatase",
     title: "오마타세 (Omatase)",
     summary: "일본 식당 예약 대행 서비스 - 언어 장벽 없이 간편하게 예약",
-    thumbnail: "/images/omatase.png",
+    thumbnail: "./images/omatase.png",
     period: "2024.02.05 - 2024.02.25",
     team: "프론트엔드 1명, 프로젝트 리드 1명",
 
@@ -96,7 +96,7 @@ export const projects = [
     id: "running-crew",
     title: "러닝 크루",
     summary: "지역 기반 러닝 크루 매칭 및 기록 관리 서비스",
-    thumbnail: "/images/running-crew.png",
+    thumbnail: "./images/running-crew.png",
     period: "2024.12 - 2024.12",
     team: "프론트엔드 1명",
 
