@@ -145,20 +145,20 @@ export const experience = {
   company: "미래 청년 일자리 - 오마이컴퍼니",
   position: "플랫폼 개발자 인턴",
   period: "2025.06 - 2025.12",
-  description: "크라우드펀딩 서비스의 관리자 페이지 Vue 3 리뉴얼 프로젝트를 담당했습니다.",
+  description: "크라우드펀딩 서비스의 프론트엔드 리뉴얼과 백엔드 API 개발을 담당했습니다.",
 
   highlights: [
     {
-      title: "Vue 3 기반 Admin 전면 리뉴얼",
-      detail: "기존 관리자 화면을 Vue 3 Composition API로 재구축. Main/Projects, Board, Stats, Member 영역의 퍼블리싱과 기능 구현을 담당하며 프론트엔드 전체 구조를 개선했습니다."
+      title: "Admin 리뉴얼 (Frontend)",
+      detail: "기존 관리자 화면을 Vue 3 Composition API로 전면 재구축. Main/Projects, Board, Stats, Member 영역 퍼블리싱 및 기능 구현. Chart.js 기반 통계 대시보드와 공통 컴포넌트 라이브러리를 구축했습니다."
     },
     {
-      title: "Composable 패턴 적용",
-      detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 재사용성을 높임. 공통 컴포넌트 라이브러리를 구축하여 개발 속도와 일관성을 향상시켰습니다."
+      title: "스토어 데이터 수집 시스템 (Backend)",
+      detail: "네이버 검색 API 기반 스토어 정보 자동 수집 시스템 개발. JPA Specification을 활용한 고급 검색 기능, Company CRUD API, 이메일/메시지 일괄 발송 시스템을 구현하여 영업 효율을 향상시켰습니다."
     },
     {
-      title: "통계 대시보드 구현",
-      detail: "Chart.js와 vue-chartjs를 활용한 통계 시각화 구현. 연간/일간 데이터를 차트로 표현하여 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다."
+      title: "세 번째 프로젝트 (준비 중)",
+      detail: "세 번째 프로젝트 내용이 추가될 예정입니다."
     }
   ]
 };
