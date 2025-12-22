@@ -76,7 +76,7 @@ function Navbar() {
         navigate("/");
         setTimeout(() => {
           scrollToSection("contact");
-        }, 0);
+        }, 100);
       }
     }
   }

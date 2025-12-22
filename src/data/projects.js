@@ -1,52 +1,5 @@
 export const projects = [
   {
-    id: "omc-admin",
-    title: "오마이컴퍼니 Admin 리뉴얼",
-    summary: "크라우드펀딩 서비스 관리자 화면 Vue 3 기반 전면 리뉴얼",
-    thumbnail: "./images/omc-admin.png",
-    period: "2025.07 - 2025.12",
-    team: "프론트엔드 2명",
-
-    problem: {
-      title: "문제 상황",
-      description: "기존 관리자 화면은 기술 스택 노후화, 화면 구조 일관성 부족, 유지보수 난이도 증가 등의 문제가 있었습니다. Spring Boot + JPA 기반 백엔드는 유지한 상태에서 프론트엔드만 개선이 필요했습니다."
-    },
-
-    solution: {
-      title: "해결 방법",
-      items: [
-        {
-          subtitle: "Vue 3 Composition API 기반 리뉴얼",
-          detail: "백엔드는 그대로 유지하고 프론트엔드를 Vue 3로 전면 재구축. Composition API와 <script setup> 문법으로 컴포넌트 구조를 설계하여 가독성과 재사용성을 높였습니다."
-        },
-        {
-          subtitle: "Composable 패턴으로 로직 분리",
-          detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다."
-        },
-        {
-          subtitle: "Chart.js 기반 통계 시각화",
-          detail: "연간/일간 통계 데이터를 Chart.js로 시각화. vue-chartjs를 활용해 재사용 가능한 차트 컴포넌트를 구성하고, 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다."
-        }
-      ]
-    },
-
-    myRole: [
-      "Main/Projects, Board, Stats, Member 화면 퍼블리싱 및 기능 구현",
-      "Vue 3 Composition API 기반 컴포넌트 설계 및 개발",
-      "JPA 기반 REST API 연동 및 데이터 처리 로직 구현",
-      "Chart.js를 활용한 통계 대시보드 차트 컴포넌트 개발",
-      "공통 컴포넌트 라이브러리 구축 및 코드 컨벤션 적용"
-    ],
-
-    tech: ["Vue 3", "TypeScript", "Composition API", "Vue Router", "Vite", "Axios", "Bootstrap 5", "SCSS", "Chart.js"],
-
-    links: {
-      // github: 'https://github.com/...',
-      // demo: 'https://...'
-    }
-  },
-
-  {
     id: "omatase",
     title: "오마타세 (Omatase)",
     summary: "일본 식당 예약 대행 서비스 - 언어 장벽 없이 간편하게 예약",
