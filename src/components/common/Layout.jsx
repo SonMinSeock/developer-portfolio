@@ -2,10 +2,12 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import FallingStars from './FallingStars';
+import CursorGlow from './CursorGlow';
 
 function Layout() {
   return (
     <>
+      <CursorGlow />
       <FallingStars />
       <Navbar />
       <Main>
