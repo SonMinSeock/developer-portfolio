@@ -2,42 +2,43 @@ export const projects = [
   {
     id: "omc-admin",
     title: "오마이컴퍼니 Admin 리뉴얼",
-    summary: "운영 중인 관리자 페이지의 UI/UX와 코드 구조를 개선한 프로젝트",
+    summary: "크라우드펀딩 서비스 관리자 화면 Vue 3 기반 전면 리뉴얼",
     thumbnail: "./images/omc-admin.png",
-    period: "2025.06 - 2025.11",
+    period: "2025.07 - 2025.12",
     team: "프론트엔드 2명",
 
     problem: {
       title: "문제 상황",
-      description: "레거시 Admin은 페이지별로 중복 코드가 많고, 상태 관리가 분산되어 있어 기능 추가 시 사이드 이펙트가 자주 발생했습니다. 또한 일관되지 않은 UI로 인해 운영팀의 학습 비용이 높았습니다."
+      description: "기존 관리자 화면은 기술 스택 노후화, 화면 구조 일관성 부족, 유지보수 난이도 증가 등의 문제가 있었습니다. Spring Boot + JPA 기반 백엔드는 유지한 상태에서 프론트엔드만 개선이 필요했습니다."
     },
 
     solution: {
       title: "해결 방법",
       items: [
         {
-          subtitle: "도메인 단위 설계",
-          detail: "기능별로 분산된 코드를 도메인(회원, 주문, 정산) 단위로 재구성. 각 도메인의 상태와 로직을 응집도 높게 관리하여 수정 범위를 명확히 했습니다."
+          subtitle: "Vue 3 Composition API 기반 리뉴얼",
+          detail: "백엔드는 그대로 유지하고 프론트엔드를 Vue 3로 전면 재구축. Composition API와 <script setup> 문법으로 컴포넌트 구조를 설계하여 가독성과 재사용성을 높였습니다."
         },
         {
-          subtitle: "재사용 가능한 컴포넌트",
-          detail: "Table, Form, Modal 등을 Compound Component 패턴으로 설계. props drilling을 줄이고 컴포넌트 조합만으로 다양한 케이스를 처리할 수 있게 했습니다."
+          subtitle: "Composable 패턴으로 로직 분리",
+          detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다."
         },
         {
-          subtitle: "MSW 기반 개발",
-          detail: "API 개발 전 MSW로 Mock Server를 구축하여 프론트엔드 개발을 먼저 진행. 실제 API 연동 시 핸들러만 교체하는 방식으로 병렬 작업을 가능하게 했습니다."
+          subtitle: "Chart.js 기반 통계 시각화",
+          detail: "연간/일간 통계 데이터를 Chart.js로 시각화. vue-chartjs를 활용해 재사용 가능한 차트 컴포넌트를 구성하고, 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다."
         }
       ]
     },
 
     myRole: [
-      "기존 Admin 분석 후 도메인 구조 설계 및 문서화",
-      "Recoil 기반 전역 상태 관리 설계 (atom family 활용)",
-      "Compound Component 패턴 기반 공통 컴포넌트 라이브러리 구축",
-      "MSW를 활용한 Mock API 환경 구성 및 개발 워크플로우 수립"
+      "Main/Projects, Board, Stats, Member 화면 퍼블리싱 및 기능 구현",
+      "Vue 3 Composition API 기반 컴포넌트 설계 및 개발",
+      "JPA 기반 REST API 연동 및 데이터 처리 로직 구현",
+      "Chart.js를 활용한 통계 대시보드 차트 컴포넌트 개발",
+      "공통 컴포넌트 라이브러리 구축 및 코드 컨벤션 적용"
     ],
 
-    tech: ["React", "Recoil", "styled-components", "MSW", "React Query"],
+    tech: ["Vue 3", "TypeScript", "Composition API", "Vue Router", "Vite", "Axios", "Bootstrap 5", "SCSS", "Chart.js"],
 
     links: {
       // github: 'https://github.com/...',
@@ -144,20 +145,20 @@ export const experience = {
   company: "미래 청년 일자리 - 오마이컴퍼니",
   position: "플랫폼 개발자 인턴",
   period: "2025.06 - 2025.12",
-  description: "B2B SaaS 제품의 관리자 페이지와 사용자 대시보드 개발을 담당하고 있습니다.",
+  description: "크라우드펀딩 서비스의 관리자 페이지 Vue 3 리뉴얼 프로젝트를 담당했습니다.",
 
   highlights: [
     {
-      title: "Admin UI/UX 리뉴얼",
-      detail: "운영팀 피드백을 반영해 관리자 페이지 전체를 재설계. 도메인 단위 구조로 전환하여 기능 추가 시 개발 시간을 평균 30% 단축했습니다."
+      title: "Vue 3 기반 Admin 전면 리뉴얼",
+      detail: "기존 관리자 화면을 Vue 3 Composition API로 재구축. Main/Projects, Board, Stats, Member 영역의 퍼블리싱과 기능 구현을 담당하며 프론트엔드 전체 구조를 개선했습니다."
     },
     {
-      title: "컴포넌트 설계",
-      detail: "Compound Component 패턴으로 재사용 가능한 UI 라이브러리 구축. 새로운 페이지 개발 시 기존 컴포넌트 조합만으로 80% 이상 구현 가능하게 했습니다."
+      title: "Composable 패턴 적용",
+      detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 재사용성을 높임. 공통 컴포넌트 라이브러리를 구축하여 개발 속도와 일관성을 향상시켰습니다."
     },
     {
-      title: "유지보수성 개선",
-      detail: "레거시 코드의 중복 로직을 Custom Hook으로 추출하고, 상태 관리를 Recoil로 통일. 코드 리뷰 시 사이드 이펙트 발생 빈도를 크게 줄였습니다."
+      title: "통계 대시보드 구현",
+      detail: "Chart.js와 vue-chartjs를 활용한 통계 시각화 구현. 연간/일간 데이터를 차트로 표현하여 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다."
     }
   ]
 };
