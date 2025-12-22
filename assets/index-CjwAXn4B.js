@@ -198,19 +198,39 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       height: 2px;
     }
   }
-`;function Gh(){return(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(Hh,{}),(0,I.jsx)(Za,{}),(0,I.jsx)(qh,{children:(0,I.jsx)(Lt,{})})]})}var Kh=Gh,qh=F.main`
+`;function Gh(){let e=(0,b.useRef)(null);return(0,b.useEffect)(()=>{let t,n=n=>{t&&cancelAnimationFrame(t),t=requestAnimationFrame(()=>{e.current&&(e.current.style.transform=`translate(${n.clientX}px, ${n.clientY}px)`)})};return window.addEventListener(`mousemove`,n,{passive:!0}),()=>{window.removeEventListener(`mousemove`,n),t&&cancelAnimationFrame(t)}},[]),(0,I.jsx)(qh,{ref:e})}var Kh=Gh,qh=F.div`
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.03) 30%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: ${({theme:e})=>e.zIndex.base};
+  will-change: transform;
+
+  @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
+    display: none;
+  }
+`;function Jh(){return(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(Kh,{}),(0,I.jsx)(Hh,{}),(0,I.jsx)(Za,{}),(0,I.jsx)(Xh,{children:(0,I.jsx)(Lt,{})})]})}var Yh=Jh,Xh=F.main`
   padding-top: 64px; /* Navbar 높이만큼 여백 */
   min-height: 100vh;
   position: relative;
   z-index: ${({theme:e})=>e.zIndex.base};
-`;function Jh(e,t=100){let[n,r]=(0,b.useState)(``),[i,a]=(0,b.useState)(!0),[o,s]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let n=0,i=setInterval(()=>{n<e.length?(r(e.slice(0,n+1)),n++):(clearInterval(i),s(!0),setTimeout(()=>a(!1),500))},t);return()=>clearInterval(i)},[e,t]),{displayedText:n,showCursor:i,isComplete:o}}var Yh=`/developer-portfolio/assets/profile-TTDaK1xk.jpg`;function Xh(){let{displayedText:e,showCursor:t,isComplete:n}=Jh(`손민석입니다`,100);return(0,I.jsx)(Qh,{id:`hero`,children:(0,I.jsxs)($h,{children:[(0,I.jsxs)(eg,{as:zh.div,initial:{opacity:0,x:-30},animate:{opacity:1,x:0},transition:{duration:.6},children:[(0,I.jsxs)(tg,{children:[`안녕하세요,\xA0`,(0,I.jsxs)(ng,{children:[e,t&&(0,I.jsx)(rg,{children:`|`})]})]}),n&&(0,I.jsxs)(I.Fragment,{children:[(0,I.jsxs)(og,{as:zh.h1,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5},children:[`구조와 판단을 고민하는`,(0,I.jsx)(`br`,{}),`프론트엔드 개발자입니다`]}),(0,I.jsxs)(sg,{as:zh.p,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.2},children:[`단순히 기능을 구현하는 것을 넘어, `,(0,I.jsx)(`strong`,{children:`왜 이렇게 설계했는지`}),`를 설명할 수 있는 개발자가 되고자 합니다. 유지보수 가능한 코드와 확장 가능한 구조를 만들기 위해 고민합니다.`]}),(0,I.jsxs)(cg,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:[(0,I.jsx)(lg,{children:`React`}),(0,I.jsx)(lg,{children:`Vue 3`}),(0,I.jsx)(lg,{children:`TypeScript`}),(0,I.jsx)(lg,{children:`NodeJS`}),(0,I.jsx)(lg,{children:`Python`}),(0,I.jsx)(lg,{children:`Fast API`}),(0,I.jsx)(lg,{children:`MySQL`})]})]})]}),(0,I.jsx)(ig,{as:zh.div,initial:{opacity:0,x:30},animate:{opacity:1,x:0},transition:{duration:.6,delay:.2},children:(0,I.jsx)(ag,{src:Yh,alt:`Profile`})})]})})}var Zh=Xh,Qh=F.section`
+`;function Zh(e,t=100){let[n,r]=(0,b.useState)(``),[i,a]=(0,b.useState)(!0),[o,s]=(0,b.useState)(!1);return(0,b.useEffect)(()=>{let n=0,i=setInterval(()=>{n<e.length?(r(e.slice(0,n+1)),n++):(clearInterval(i),s(!0),setTimeout(()=>a(!1),500))},t);return()=>clearInterval(i)},[e,t]),{displayedText:n,showCursor:i,isComplete:o}}var Qh=`/developer-portfolio/assets/profile-TTDaK1xk.jpg`;function $h(){let{displayedText:e,showCursor:t,isComplete:n}=Zh(`손민석입니다`,100);return(0,I.jsx)(tg,{id:`hero`,children:(0,I.jsxs)(ng,{children:[(0,I.jsxs)(rg,{as:zh.div,initial:{opacity:0,x:-30},animate:{opacity:1,x:0},transition:{duration:.6},children:[(0,I.jsxs)(ig,{children:[`안녕하세요,\xA0`,(0,I.jsxs)(ag,{children:[e,t&&(0,I.jsx)(og,{children:`|`})]})]}),n&&(0,I.jsxs)(I.Fragment,{children:[(0,I.jsxs)(lg,{as:zh.h1,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5},children:[`구조와 판단을 고민하는`,(0,I.jsx)(`br`,{}),`프론트엔드 개발자입니다`]}),(0,I.jsxs)(ug,{as:zh.p,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.2},children:[`단순히 기능을 구현하는 것을 넘어, `,(0,I.jsx)(`strong`,{children:`왜 이렇게 설계했는지`}),`를 설명할 수 있는 개발자가 되고자 합니다. 유지보수 가능한 코드와 확장 가능한 구조를 만들기 위해 고민합니다.`]}),(0,I.jsxs)(dg,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:[(0,I.jsx)(fg,{children:`React`}),(0,I.jsx)(fg,{children:`Vue 3`}),(0,I.jsx)(fg,{children:`TypeScript`}),(0,I.jsx)(fg,{children:`NodeJS`}),(0,I.jsx)(fg,{children:`Python`}),(0,I.jsx)(fg,{children:`Fast API`}),(0,I.jsx)(fg,{children:`MySQL`})]})]})]}),(0,I.jsx)(sg,{as:zh.div,initial:{opacity:0,x:30},animate:{opacity:1,x:0},transition:{duration:.6,delay:.2},children:(0,I.jsx)(cg,{src:Qh,alt:`Profile`})})]})})}var eg=$h,tg=F.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: ${({theme:e})=>e.spacing.xl} 0;
   position: relative;
   overflow: hidden;
-`,$h=F.div`
+`,ng=F.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -225,11 +245,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     gap: ${({theme:e})=>e.spacing.xl};
     text-align: center;
   }
-`,eg=F.div`
+`,rg=F.div`
   @media (max-width: ${({theme:e})=>e.breakpoints.desktop}) {
     order: 2;
   }
-`,tg=F.p`
+`,ig=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
@@ -242,9 +262,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize.xl};
   }
-`,ng=F.span`
+`,ag=F.span`
   color: ${({theme:e})=>e.colors.primary};
-`,rg=F.span`
+`,og=F.span`
   color: ${({theme:e})=>e.colors.primary};
   animation: blink 0.7s infinite;
 
@@ -256,7 +276,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       opacity: 0;
     }
   }
-`,ig=F.div`
+`,sg=F.div`
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -265,7 +285,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     order: 1;
     justify-content: center;
   }
-`,ag=F.img`
+`,cg=F.img`
   width: 100%;
   max-width: 320px;
   height: auto;
@@ -279,7 +299,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     max-width: 240px;
   }
-`,og=F.h1`
+`,lg=F.h1`
   font-size: ${({theme:e})=>e.typography.fontSize[`5xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   line-height: ${({theme:e})=>e.typography.lineHeight.tight};
@@ -293,7 +313,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   }
-`,sg=F.p`
+`,ug=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
@@ -307,7 +327,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize.base};
   }
-`,cg=F.div`
+`,dg=F.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({theme:e})=>e.spacing.sm};
@@ -315,7 +335,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.desktop}) {
     justify-content: center;
   }
-`,lg=F.span`
+`,fg=F.span`
   padding: ${({theme:e})=>e.spacing.xs} ${({theme:e})=>e.spacing.sm};
   background-color: ${({theme:e})=>e.colors.primaryAlpha};
   color: ${({theme:e})=>e.colors.primaryLight};
@@ -323,20 +343,20 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   border: 1px solid ${({theme:e})=>e.colors.primary}33;
-`;const ug=[{id:`omatase`,title:`오마타세 (Omatase)`,summary:`일본 식당 예약 대행 서비스 - 언어 장벽 없이 간편하게 예약`,thumbnail:`./images/omatase.png`,period:`2024.02.05 - 2024.02.25`,team:`프론트엔드 1명, 프로젝트 리드 1명`,problem:{title:`문제 상황`,description:`일본을 방문하는 한국인 관광객들은 언어 장벽으로 식당 예약에 어려움을 겪습니다. 대부분의 일본 식당은 전화 예약만 가능하고, 영어 지원이 제한적이며, 예약 문화 차이로 인해 직접 예약이 부담스러웠습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`다중 시간대 예약 시스템`,detail:`1지망, 2지망, 3지망 시간대를 선택할 수 있는 시스템을 구현. 예약 가능성을 높이고 사용자의 선택권을 확대했습니다. react-datepicker를 활용한 직관적인 날짜/시간 선택 UI를 제공했습니다.`},{subtitle:`고객-관리자 양방향 인터페이스`,detail:`고객용 예약 신청 페이지와 관리자용 예약 처리 페이지를 분리 설계. 관리자는 일본어로 예약 내용을 작성하고, 고객은 한국어로 상태를 확인할 수 있도록 이중 언어를 지원했습니다.`},{subtitle:`Firebase 실시간 상태 관리`,detail:`Firebase Realtime Database를 활용해 예약 상태('요청 중', '확인 대기', '확정', '불가능') 변경을 실시간으로 동기화. 성인/어린이 인원 정보와 선호 시간대를 구조화하여 저장했습니다.`}]},myRole:[`고객용 예약 신청 폼 UI/UX 설계 및 구현 (다중 시간대, 인원 선택)`,`관리자용 예약 처리 인터페이스 개발 (상태 관리, 일본어 입력)`,`Recoil 기반 전역 상태 관리 및 Firebase 연동 로직 구현`,`react-datepicker 커스터마이징 및 반응형 UI 구현`,`GitHub 브랜치 전략(master/develop/feature) 수립 및 버전 관리`],tech:[`React`,`JavaScript`,`Recoil`,`styled-components`,`Firebase`,`react-datepicker`,`Netlify`],links:{github:`https://github.com/SonMinSeock/table-check-project`,demo:`https://omatase.netlify.app/`}},{id:`running-crew`,title:`러닝 크루`,summary:`지역 기반 러닝 크루 매칭 및 기록 관리 서비스`,thumbnail:`./images/running-crew.png`,period:`2024.12 - 2024.12`,team:`프론트엔드 1명`,problem:{title:`문제 상황`,description:`Vue 3 Composition API로 개발하면서 공통 로직(인증, API 호출 등)이 컴포넌트마다 반복되고, 타입 안정성이 부족하여 런타임 에러가 자주 발생했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`Composable 패턴`,detail:`useAuth, useFetch 등 공통 로직을 Composable로 추출. 인증 상태와 API 호출 로직의 중복을 제거하고 테스트 가능한 단위로 분리했습니다.`},{subtitle:`TypeScript 도입`,detail:`API 응답 타입을 인터페이스로 정의하고, Composable의 반환 타입을 명시. 컴파일 타임에 에러를 잡아 런타임 안정성을 확보했습니다.`},{subtitle:`Firebase 활용 설계`,detail:`Authentication, Firestore, Storage를 역할별로 분리하여 서비스 레이어 구성. 각 기능의 의존성을 명확히 하고 교체 가능하게 설계했습니다.`}]},myRole:[`Vue 3 Composition API 기반 프로젝트 구조 설계`,`TypeScript 타입 시스템 설계 및 API 인터페이스 정의`,`Composable 패턴으로 재사용 로직 분리 (useAuth, useFetch, useMap)`,`Firebase 연동 및 실시간 데이터 동기화 구현`],tech:[`Vue 3`,`TypeScript`,`Pinia`,`Firebase`,`Google Maps API`],links:{github:`https://github.com/SonMinSeock/running-crew`,demo:`https://running-crew.netlify.app/`}}],dg={company:`미래 청년 일자리 - 오마이컴퍼니`,position:`플랫폼 개발자 인턴`,period:`2025.06 - 2025.12`,description:`크라우드펀딩 서비스의 프론트엔드 리뉴얼과 백엔드 API 개발을 담당했습니다.`,highlights:[{title:`Admin 리뉴얼 (Frontend)`,detail:`기존 관리자 화면을 Vue 3 Composition API로 전면 재구축. Main/Projects, Board, Stats, Member 영역 퍼블리싱 및 기능 구현. Chart.js 기반 통계 대시보드와 공통 컴포넌트 라이브러리를 구축했습니다.`},{title:`스토어 데이터 수집 시스템 (Backend)`,detail:`네이버 검색 API 기반 스토어 정보 자동 수집 시스템 개발. JPA Specification을 활용한 고급 검색 기능, Company CRUD API, 이메일/메시지 일괄 발송 시스템을 구현하여 영업 효율을 향상시켰습니다.`},{title:`RAG 챗봇 API (Backend)`,detail:`GPT-4o-mini 기반 고객지원 챗봇 백엔드 개발. 하이브리드 PDF 파싱으로 테이블 정확도 95% 달성, 대화 맥락 기반 쿼리 재작성, SSE 스트리밍 응답 구조 개선, 문서 로딩 성능 30배 향상(5분→10초)을 구현했습니다.`}]},fg=[{id:`omc-admin-work`,title:`Admin 리뉴얼 (Frontend)`,summary:`크라우드펀딩 서비스 관리자 화면 Vue 3 기반 전면 리뉴얼`,thumbnail:`./images/omc-admin.png`,period:`2025.07 - 2025.12`,team:`프론트엔드 2명`,problem:{title:`문제 상황`,description:`기존 관리자 화면은 기술 스택 노후화, 화면 구조 일관성 부족, 유지보수 난이도 증가 등의 문제가 있었습니다. Spring Boot + JPA 기반 백엔드는 유지한 상태에서 프론트엔드만 개선이 필요했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`Vue 3 Composition API 기반 리뉴얼`,detail:`백엔드는 그대로 유지하고 프론트엔드를 Vue 3로 전면 재구축. Composition API와 <script setup> 문법으로 컴포넌트 구조를 설계하여 가독성과 재사용성을 높였습니다.`},{subtitle:`Composable 패턴으로 로직 분리`,detail:`API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다.`},{subtitle:`Chart.js 기반 통계 시각화`,detail:`연간/일간 통계 데이터를 Chart.js로 시각화. vue-chartjs를 활용해 재사용 가능한 차트 컴포넌트를 구성하고, 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다.`}]},myRole:[`Main/Projects, Board, Stats, Member 화면 퍼블리싱 및 기능 구현`,`Vue 3 Composition API 기반 컴포넌트 설계 및 개발`,`JPA 기반 REST API 연동 및 데이터 처리 로직 구현`,`Chart.js를 활용한 통계 대시보드 차트 컴포넌트 개발`,`공통 컴포넌트 라이브러리 구축 및 코드 컨벤션 적용`],tech:[`Vue 3`,`TypeScript`,`Composition API`,`Vue Router`,`Vite`,`Axios`,`Bootstrap 5`,`SCSS`,`Chart.js`],links:{}},{id:`store-collection-work`,title:`스토어 데이터 수집 시스템 (Backend)`,summary:`네이버 검색 API 기반 스토어 정보 자동 수집 및 관리 시스템`,thumbnail:`./images/store-collection.png`,period:`2025.06 - 2025.09`,team:`프론트엔드 1명, 백엔드 1명`,problem:{title:`문제 상황`,description:`영업팀이 잠재 고객 발굴을 위해 수동으로 스토어 정보를 수집하고 관리해야 했습니다. 검색, 필터링, 일괄 연락 등 반복 작업이 많아 효율성이 낮았고, 데이터 일관성 유지가 어려웠습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`네이버 검색 API 기반 자동 수집`,detail:`키워드 기반으로 스토어 정보를 자동 수집하는 시스템 구축. 네이버 검색 API를 활용해 스토어명, 주소, 연락처 등을 수집하고 데이터베이스에 저장했습니다.`},{subtitle:`JPA Specification 기반 고급 검색`,detail:`동적 쿼리 생성이 가능한 JPA Specification 패턴 도입. 지역, 업종, 상태 등 다양한 조건을 조합한 복잡한 검색을 유연하게 처리했습니다.`},{subtitle:`이메일/메시지 일괄 발송`,detail:`선택한 스토어 목록에 이메일과 메시지를 일괄 발송하는 기능 구현. 템플릿 기반 메시지 작성과 발송 이력 관리를 통해 영업 효율을 향상시켰습니다.`}]},myRole:[`네이버 검색 API 연동 및 스토어 정보 자동 수집 기능 구현`,`JPA Specification을 활용한 동적 검색 쿼리 설계 및 개발`,`Company CRUD API 및 필터링 기능 구현`,`이메일/메시지 일괄 발송 시스템 개발`,`Spring Boot 기반 RESTful API 설계 및 구현`],tech:[`Spring Boot`,`JPA`,`Specification`,`MySQL`,`Naver Search API`,`Java`],links:{}},{id:`rag-chatbot-work`,title:`RAG 챗봇 API (Backend)`,summary:`GPT-4o-mini 기반 크라우드펀딩 고객지원 챗봇 백엔드`,thumbnail:`./images/rag-chatbot.png`,period:`2025.10 - 2025.12`,team:`프론트 1명, 백엔드 1명`,problem:{title:`문제 상황`,description:`크라우드펀딩 플랫폼 가이드 문서(PDF)가 200페이지 이상으로 방대하여 고객이 필요한 정보를 찾기 어려웠습니다. 기존 PDF 파싱 방식은 테이블 추출 정확도가 낮았고, 문서 로딩에 5분 이상 소요되어 실시간 응답이 불가능했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`하이브리드 PDF 파싱`,detail:`Camelot(테이블 전용)과 pymupdf4llm(텍스트 전용)을 결합한 하이브리드 파싱 방식 도입. 테이블 추출 정확도를 95%까지 향상시키고, 구조화된 데이터로 변환했습니다.`},{subtitle:`대화 맥락 기반 쿼리 재작성`,detail:`사용자의 질문과 이전 대화 기록을 GPT-4o-mini로 분석하여 독립적인 검색 쿼리로 재작성. 대화 흐름을 유지하면서도 정확한 문서 검색이 가능하게 했습니다.`},{subtitle:`SSE 스트리밍 응답 및 성능 최적화`,detail:`Server-Sent Events를 활용한 실시간 스트리밍 응답 구조 개선. 문서 임베딩 캐싱과 배치 처리로 로딩 시간을 5분에서 10초로 30배 단축했습니다.`}]},myRole:[`Camelot + pymupdf4llm 기반 하이브리드 PDF 파싱 시스템 설계 및 구현`,`GPT-4o-mini를 활용한 대화 맥락 기반 쿼리 재작성 로직 개발`,`FAISS 기반 벡터 검색 및 RAG 파이프라인 구축`,`SSE 스트리밍 응답 구조 개선 및 성능 최적화`,`FastAPI 기반 RESTful API 설계 및 구현`],tech:[`Python`,`FastAPI`,`GPT-4o-mini`,`FAISS`,`Camelot`,`pymupdf4llm`,`SSE`],links:{}}],pg={email:`zonins3@gmail.com`,phone:`010-2274-2538`,github:`https://github.com/SonMinSeock`,blog:`https://velog.io/@alstjr2538/posts`};function mg(){return(0,I.jsx)(gg,{id:`experience`,children:(0,I.jsxs)(_g,{children:[(0,I.jsx)(vg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Experience`}),(0,I.jsxs)(yg,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:[(0,I.jsxs)(bg,{children:[(0,I.jsxs)(xg,{children:[(0,I.jsx)(Sg,{children:dg.company}),(0,I.jsx)(Cg,{children:dg.position})]}),(0,I.jsx)(wg,{children:dg.period})]}),(0,I.jsx)(Tg,{children:dg.description}),(0,I.jsx)(Eg,{children:dg.highlights.map((e,t)=>(0,I.jsxs)(Dg,{children:[(0,I.jsx)(Og,{children:e.title}),(0,I.jsx)(kg,{children:e.detail})]},t))})]})]})})}var hg=mg,gg=F.section`
+`;const pg=[{id:`omatase`,title:`오마타세 (Omatase)`,summary:`일본 식당 예약 대행 서비스 - 언어 장벽 없이 간편하게 예약`,thumbnail:`./images/omatase.png`,period:`2024.02.05 - 2024.02.25`,team:`프론트엔드 1명, 프로젝트 리드 1명`,problem:{title:`문제 상황`,description:`일본을 방문하는 한국인 관광객들은 언어 장벽으로 식당 예약에 어려움을 겪습니다. 대부분의 일본 식당은 전화 예약만 가능하고, 영어 지원이 제한적이며, 예약 문화 차이로 인해 직접 예약이 부담스러웠습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`다중 시간대 예약 시스템`,detail:`1지망, 2지망, 3지망 시간대를 선택할 수 있는 시스템을 구현. 예약 가능성을 높이고 사용자의 선택권을 확대했습니다. react-datepicker를 활용한 직관적인 날짜/시간 선택 UI를 제공했습니다.`},{subtitle:`고객-관리자 양방향 인터페이스`,detail:`고객용 예약 신청 페이지와 관리자용 예약 처리 페이지를 분리 설계. 관리자는 일본어로 예약 내용을 작성하고, 고객은 한국어로 상태를 확인할 수 있도록 이중 언어를 지원했습니다.`},{subtitle:`Firebase 실시간 상태 관리`,detail:`Firebase Realtime Database를 활용해 예약 상태('요청 중', '확인 대기', '확정', '불가능') 변경을 실시간으로 동기화. 성인/어린이 인원 정보와 선호 시간대를 구조화하여 저장했습니다.`}]},myRole:[`고객용 예약 신청 폼 UI/UX 설계 및 구현 (다중 시간대, 인원 선택)`,`관리자용 예약 처리 인터페이스 개발 (상태 관리, 일본어 입력)`,`Recoil 기반 전역 상태 관리 및 Firebase 연동 로직 구현`,`react-datepicker 커스터마이징 및 반응형 UI 구현`,`GitHub 브랜치 전략(master/develop/feature) 수립 및 버전 관리`],tech:[`React`,`JavaScript`,`Recoil`,`styled-components`,`Firebase`,`react-datepicker`,`Netlify`],links:{github:`https://github.com/SonMinSeock/table-check-project`,demo:`https://omatase.netlify.app/`}},{id:`running-crew`,title:`러닝 크루`,summary:`지역 기반 러닝 크루 매칭 및 기록 관리 서비스`,thumbnail:`./images/running-crew.png`,period:`2024.12 - 2024.12`,team:`프론트엔드 1명`,problem:{title:`문제 상황`,description:`Vue 3 Composition API로 개발하면서 공통 로직(인증, API 호출 등)이 컴포넌트마다 반복되고, 타입 안정성이 부족하여 런타임 에러가 자주 발생했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`Composable 패턴`,detail:`useAuth, useFetch 등 공통 로직을 Composable로 추출. 인증 상태와 API 호출 로직의 중복을 제거하고 테스트 가능한 단위로 분리했습니다.`},{subtitle:`TypeScript 도입`,detail:`API 응답 타입을 인터페이스로 정의하고, Composable의 반환 타입을 명시. 컴파일 타임에 에러를 잡아 런타임 안정성을 확보했습니다.`},{subtitle:`Firebase 활용 설계`,detail:`Authentication, Firestore, Storage를 역할별로 분리하여 서비스 레이어 구성. 각 기능의 의존성을 명확히 하고 교체 가능하게 설계했습니다.`}]},myRole:[`Vue 3 Composition API 기반 프로젝트 구조 설계`,`TypeScript 타입 시스템 설계 및 API 인터페이스 정의`,`Composable 패턴으로 재사용 로직 분리 (useAuth, useFetch, useMap)`,`Firebase 연동 및 실시간 데이터 동기화 구현`],tech:[`Vue 3`,`TypeScript`,`Pinia`,`Firebase`,`Google Maps API`],links:{github:`https://github.com/SonMinSeock/running-crew`,demo:`https://running-crew.netlify.app/`}}],mg={company:`미래 청년 일자리 - 오마이컴퍼니`,position:`플랫폼 개발자 인턴`,period:`2025.06 - 2025.12`,description:`크라우드펀딩 서비스의 프론트엔드 리뉴얼과 백엔드 API 개발을 담당했습니다.`,highlights:[{title:`Admin 리뉴얼 (Frontend)`,detail:`기존 관리자 화면을 Vue 3 Composition API로 전면 재구축. Main/Projects, Board, Stats, Member 영역 퍼블리싱 및 기능 구현. Chart.js 기반 통계 대시보드와 공통 컴포넌트 라이브러리를 구축했습니다.`},{title:`스토어 데이터 수집 시스템 (Backend)`,detail:`네이버 검색 API 기반 스토어 정보 자동 수집 시스템 개발. JPA Specification을 활용한 고급 검색 기능, Company CRUD API, 이메일/메시지 일괄 발송 시스템을 구현하여 영업 효율을 향상시켰습니다.`},{title:`RAG 챗봇 API (Backend)`,detail:`GPT-4o-mini 기반 고객지원 챗봇 백엔드 개발. 하이브리드 PDF 파싱으로 테이블 정확도 95% 달성, 대화 맥락 기반 쿼리 재작성, SSE 스트리밍 응답 구조 개선, 문서 로딩 성능 30배 향상(5분→10초)을 구현했습니다.`}]},hg=[{id:`omc-admin-work`,title:`Admin 리뉴얼 (Frontend)`,summary:`크라우드펀딩 서비스 관리자 화면 Vue 3 기반 전면 리뉴얼`,thumbnail:`./images/omc-admin.png`,period:`2025.07 - 2025.12`,team:`프론트엔드 2명`,problem:{title:`문제 상황`,description:`기존 관리자 화면은 기술 스택 노후화, 화면 구조 일관성 부족, 유지보수 난이도 증가 등의 문제가 있었습니다. Spring Boot + JPA 기반 백엔드는 유지한 상태에서 프론트엔드만 개선이 필요했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`Vue 3 Composition API 기반 리뉴얼`,detail:`백엔드는 그대로 유지하고 프론트엔드를 Vue 3로 전면 재구축. Composition API와 <script setup> 문법으로 컴포넌트 구조를 설계하여 가독성과 재사용성을 높였습니다.`},{subtitle:`Composable 패턴으로 로직 분리`,detail:`API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다.`},{subtitle:`Chart.js 기반 통계 시각화`,detail:`연간/일간 통계 데이터를 Chart.js로 시각화. vue-chartjs를 활용해 재사용 가능한 차트 컴포넌트를 구성하고, 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다.`}]},myRole:[`Main/Projects, Board, Stats, Member 화면 퍼블리싱 및 기능 구현`,`Vue 3 Composition API 기반 컴포넌트 설계 및 개발`,`JPA 기반 REST API 연동 및 데이터 처리 로직 구현`,`Chart.js를 활용한 통계 대시보드 차트 컴포넌트 개발`,`공통 컴포넌트 라이브러리 구축 및 코드 컨벤션 적용`],tech:[`Vue 3`,`TypeScript`,`Composition API`,`Vue Router`,`Vite`,`Axios`,`Bootstrap 5`,`SCSS`,`Chart.js`],links:{}},{id:`store-collection-work`,title:`스토어 데이터 수집 시스템 (Backend)`,summary:`네이버 검색 API 기반 스토어 정보 자동 수집 및 관리 시스템`,thumbnail:`./images/store-collection.png`,period:`2025.06 - 2025.09`,team:`프론트엔드 1명, 백엔드 1명`,problem:{title:`문제 상황`,description:`영업팀이 잠재 고객 발굴을 위해 수동으로 스토어 정보를 수집하고 관리해야 했습니다. 검색, 필터링, 일괄 연락 등 반복 작업이 많아 효율성이 낮았고, 데이터 일관성 유지가 어려웠습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`네이버 검색 API 기반 자동 수집`,detail:`키워드 기반으로 스토어 정보를 자동 수집하는 시스템 구축. 네이버 검색 API를 활용해 스토어명, 주소, 연락처 등을 수집하고 데이터베이스에 저장했습니다.`},{subtitle:`JPA Specification 기반 고급 검색`,detail:`동적 쿼리 생성이 가능한 JPA Specification 패턴 도입. 지역, 업종, 상태 등 다양한 조건을 조합한 복잡한 검색을 유연하게 처리했습니다.`},{subtitle:`이메일/메시지 일괄 발송`,detail:`선택한 스토어 목록에 이메일과 메시지를 일괄 발송하는 기능 구현. 템플릿 기반 메시지 작성과 발송 이력 관리를 통해 영업 효율을 향상시켰습니다.`}]},myRole:[`네이버 검색 API 연동 및 스토어 정보 자동 수집 기능 구현`,`JPA Specification을 활용한 동적 검색 쿼리 설계 및 개발`,`Company CRUD API 및 필터링 기능 구현`,`이메일/메시지 일괄 발송 시스템 개발`,`Spring Boot 기반 RESTful API 설계 및 구현`],tech:[`Spring Boot`,`JPA`,`Specification`,`MySQL`,`Naver Search API`,`Java`],links:{}},{id:`rag-chatbot-work`,title:`RAG 챗봇 API (Backend)`,summary:`GPT-4o-mini 기반 크라우드펀딩 고객지원 챗봇 백엔드`,thumbnail:`./images/rag-chatbot.png`,period:`2025.10 - 2025.12`,team:`프론트 1명, 백엔드 1명`,problem:{title:`문제 상황`,description:`크라우드펀딩 플랫폼 가이드 문서(PDF)가 200페이지 이상으로 방대하여 고객이 필요한 정보를 찾기 어려웠습니다. 기존 PDF 파싱 방식은 테이블 추출 정확도가 낮았고, 문서 로딩에 5분 이상 소요되어 실시간 응답이 불가능했습니다.`},solution:{title:`해결 방법`,items:[{subtitle:`하이브리드 PDF 파싱`,detail:`Camelot(테이블 전용)과 pymupdf4llm(텍스트 전용)을 결합한 하이브리드 파싱 방식 도입. 테이블 추출 정확도를 95%까지 향상시키고, 구조화된 데이터로 변환했습니다.`},{subtitle:`대화 맥락 기반 쿼리 재작성`,detail:`사용자의 질문과 이전 대화 기록을 GPT-4o-mini로 분석하여 독립적인 검색 쿼리로 재작성. 대화 흐름을 유지하면서도 정확한 문서 검색이 가능하게 했습니다.`},{subtitle:`SSE 스트리밍 응답 및 성능 최적화`,detail:`Server-Sent Events를 활용한 실시간 스트리밍 응답 구조 개선. 문서 임베딩 캐싱과 배치 처리로 로딩 시간을 5분에서 10초로 30배 단축했습니다.`}]},myRole:[`Camelot + pymupdf4llm 기반 하이브리드 PDF 파싱 시스템 설계 및 구현`,`GPT-4o-mini를 활용한 대화 맥락 기반 쿼리 재작성 로직 개발`,`FAISS 기반 벡터 검색 및 RAG 파이프라인 구축`,`SSE 스트리밍 응답 구조 개선 및 성능 최적화`,`FastAPI 기반 RESTful API 설계 및 구현`],tech:[`Python`,`FastAPI`,`GPT-4o-mini`,`FAISS`,`Camelot`,`pymupdf4llm`,`SSE`],links:{}}],gg={email:`zonins3@gmail.com`,phone:`010-2274-2538`,github:`https://github.com/SonMinSeock`,blog:`https://velog.io/@alstjr2538/posts`};function _g(){return(0,I.jsx)(yg,{id:`experience`,children:(0,I.jsxs)(bg,{children:[(0,I.jsx)(xg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Experience`}),(0,I.jsxs)(Sg,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:[(0,I.jsxs)(Cg,{children:[(0,I.jsxs)(wg,{children:[(0,I.jsx)(Tg,{children:mg.company}),(0,I.jsx)(Eg,{children:mg.position})]}),(0,I.jsx)(Dg,{children:mg.period})]}),(0,I.jsx)(Og,{children:mg.description}),(0,I.jsx)(kg,{children:mg.highlights.map((e,t)=>(0,I.jsxs)(Ag,{children:[(0,I.jsx)(jg,{children:e.title}),(0,I.jsx)(Mg,{children:e.detail})]},t))})]})]})})}var vg=_g,yg=F.section`
   padding: ${({theme:e})=>e.spacing[`3xl`]} 0;
-`,_g=F.div`
+`,bg=F.div`
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 0 ${({theme:e})=>e.spacing.md};
-`,vg=F.h2`
+`,xg=F.h2`
   font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.xl};
   text-align: center;
-`,yg=F.div`
+`,Sg=F.div`
   background-color: ${({theme:e})=>e.colors.surface};
   border: 1px solid ${({theme:e})=>e.colors.border};
   border-radius: 12px;
@@ -345,7 +365,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     padding: ${({theme:e})=>e.spacing.lg};
   }
-`,bg=F.div`
+`,Cg=F.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -355,65 +375,65 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     flex-direction: column;
   }
-`,xg=F.div`
+`,wg=F.div`
   flex: 1;
-`,Sg=F.h3`
+`,Tg=F.h3`
   font-size: ${({theme:e})=>e.typography.fontSize[`2xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.xs};
-`,Cg=F.p`
+`,Eg=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   color: ${({theme:e})=>e.colors.primary};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
-`,wg=F.span`
+`,Dg=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
   font-family: ${({theme:e})=>e.typography.fontFamily.mono};
-`,Tg=F.p`
+`,Og=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
   margin-bottom: ${({theme:e})=>e.spacing.xl};
-`,Eg=F.div`
+`,kg=F.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.lg};
-`,Dg=F.div`
+`,Ag=F.div`
   padding-left: ${({theme:e})=>e.spacing.md};
   border-left: 3px solid ${({theme:e})=>e.colors.primary};
-`,Og=F.h4`
+`,jg=F.h4`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   font-weight: ${({theme:e})=>e.typography.fontWeight.semibold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.xs};
-`,kg=F.p`
+`,Mg=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`;function Ag(){return(0,I.jsx)(Mg,{id:`contact`,children:(0,I.jsxs)(Ng,{children:[(0,I.jsx)(Pg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Contact`}),(0,I.jsx)(Fg,{as:zh.p,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:`함께 일하고 싶으신가요? 편하게 연락주세요.`}),(0,I.jsxs)(Ig,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.2},children:[(0,I.jsxs)(Lg,{href:`mailto:${pg.email}`,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Rg,{children:`Email`}),(0,I.jsx)(zg,{children:pg.email})]}),pg.phone&&(0,I.jsxs)(Lg,{target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Rg,{children:`Phone Number`}),(0,I.jsx)(zg,{children:pg.phone})]}),(0,I.jsxs)(Lg,{href:pg.github,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Rg,{children:`GitHub`}),(0,I.jsx)(zg,{children:pg.github})]}),pg.blog&&(0,I.jsxs)(Lg,{href:pg.blog,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Rg,{children:`Blog`}),(0,I.jsx)(zg,{children:pg.blog})]})]})]})})}var jg=Ag,Mg=F.section`
+`;function Ng(){return(0,I.jsx)(Fg,{id:`contact`,children:(0,I.jsxs)(Ig,{children:[(0,I.jsx)(Lg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Contact`}),(0,I.jsx)(Rg,{as:zh.p,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:`함께 일하고 싶으신가요? 편하게 연락주세요.`}),(0,I.jsxs)(zg,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.2},children:[(0,I.jsxs)(Bg,{href:`mailto:${gg.email}`,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Email`}),(0,I.jsx)(Hg,{children:gg.email})]}),gg.phone&&(0,I.jsxs)(Bg,{target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Phone Number`}),(0,I.jsx)(Hg,{children:gg.phone})]}),(0,I.jsxs)(Bg,{href:gg.github,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`GitHub`}),(0,I.jsx)(Hg,{children:gg.github})]}),gg.blog&&(0,I.jsxs)(Bg,{href:gg.blog,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Blog`}),(0,I.jsx)(Hg,{children:gg.blog})]})]})]})})}var Pg=Ng,Fg=F.section`
   padding: ${({theme:e})=>e.spacing[`3xl`]} 0;
-`,Ng=F.div`
+`,Ig=F.div`
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 0 ${({theme:e})=>e.spacing.md};
   text-align: center;
-`,Pg=F.h2`
+`,Lg=F.h2`
   font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.lg};
-`,Fg=F.p`
+`,Rg=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   color: ${({theme:e})=>e.colors.textSub};
   margin-bottom: ${({theme:e})=>e.spacing.xl};
-`,Ig=F.div`
+`,zg=F.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: ${({theme:e})=>e.spacing.md};
   margin-top: ${({theme:e})=>e.spacing.xl};
-`,Lg=F.a`
+`,Bg=F.a`
   display: block;
   padding: ${({theme:e})=>e.spacing.lg};
   background-color: ${({theme:e})=>e.colors.surface};
@@ -427,19 +447,19 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     border-color: ${({theme:e})=>e.colors.primary};
     background-color: ${({theme:e})=>e.colors.hover};
   }
-`,Rg=F.div`
+`,Vg=F.div`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
   margin-bottom: ${({theme:e})=>e.spacing.xs};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   text-transform: uppercase;
   letter-spacing: 0.05em;
-`,zg=F.div`
+`,Hg=F.div`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   color: ${({theme:e})=>e.colors.primary};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   word-break: break-all;
-`;function Bg(){let e=ot();return(0,b.useEffect)(()=>{if(e.hash){let t=e.hash.replace(`#`,``);setTimeout(()=>{Ja(t)},100)}},[e.hash]),(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(Zh,{}),(0,I.jsx)(hg,{}),(0,I.jsx)(jg,{})]})}var Vg=Bg;function Hg({project:e,index:t}){return(0,I.jsxs)(Wg,{to:`/projects/${e.id}`,as:zh(Dn),initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:t*.1},children:[(0,I.jsx)(Gg,{children:(0,I.jsx)(`img`,{src:e.thumbnail,alt:e.title})}),(0,I.jsxs)(Kg,{children:[(0,I.jsxs)(qg,{children:[(0,I.jsx)(Jg,{children:e.title}),(0,I.jsx)(Yg,{children:e.period})]}),(0,I.jsx)(Xg,{children:e.summary}),(0,I.jsxs)(Zg,{children:[e.tech.slice(0,4).map((e,t)=>(0,I.jsx)(Qg,{children:e},t)),e.tech.length>4&&(0,I.jsxs)(Qg,{children:[`+`,e.tech.length-4]})]})]})]})}var Ug=Hg,Wg=F(Dn)`
+`;function Ug(){let e=ot();return(0,b.useEffect)(()=>{if(e.hash){let t=e.hash.replace(`#`,``);setTimeout(()=>{Ja(t)},100)}},[e.hash]),(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(eg,{}),(0,I.jsx)(vg,{}),(0,I.jsx)(Pg,{})]})}var Wg=Ug;function Gg({project:e,index:t}){return(0,I.jsxs)(qg,{to:`/projects/${e.id}`,as:zh(Dn),initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:t*.1},children:[(0,I.jsx)(Jg,{children:(0,I.jsx)(`img`,{src:e.thumbnail,alt:e.title})}),(0,I.jsxs)(Yg,{children:[(0,I.jsxs)(Xg,{children:[(0,I.jsx)(Zg,{children:e.title}),(0,I.jsx)(Qg,{children:e.period})]}),(0,I.jsx)($g,{children:e.summary}),(0,I.jsxs)(e_,{children:[e.tech.slice(0,4).map((e,t)=>(0,I.jsx)(t_,{children:e},t)),e.tech.length>4&&(0,I.jsxs)(t_,{children:[`+`,e.tech.length-4]})]})]})]})}var Kg=Gg,qg=F(Dn)`
   display: block;
   background-color: ${({theme:e})=>e.colors.surface};
   border: 1px solid ${({theme:e})=>e.colors.border};
@@ -451,7 +471,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     transform: translateY(-4px);
     border-color: ${({theme:e})=>e.colors.primary};
   }
-`,Gg=F.div`
+`,Jg=F.div`
   width: 100%;
   aspect-ratio: 16 / 9;
   background-color: ${({theme:e})=>e.colors.hover};
@@ -462,33 +482,33 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     height: 100%;
     object-fit: cover;
   }
-`,Kg=F.div`
+`,Yg=F.div`
   padding: ${({theme:e})=>e.spacing.lg};
-`,qg=F.div`
+`,Xg=F.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: ${({theme:e})=>e.spacing.sm};
   margin-bottom: ${({theme:e})=>e.spacing.sm};
-`,Jg=F.h3`
+`,Zg=F.h3`
   font-size: ${({theme:e})=>e.typography.fontSize.xl};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
-`,Yg=F.span`
+`,Qg=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.xs};
   color: ${({theme:e})=>e.colors.textSub};
   font-family: ${({theme:e})=>e.typography.fontFamily.mono};
   white-space: nowrap;
-`,Xg=F.p`
+`,$g=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
   margin-bottom: ${({theme:e})=>e.spacing.md};
-`,Zg=F.div`
+`,e_=F.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({theme:e})=>e.spacing.xs};
-`,Qg=F.span`
+`,t_=F.span`
   padding: 4px 12px;
   background-color: ${({theme:e})=>e.colors.primaryAlpha};
   color: ${({theme:e})=>e.colors.primaryLight};
@@ -496,22 +516,22 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.xs};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   border: 1px solid ${({theme:e})=>e.colors.primary}33;
-`;function $g(){return(0,I.jsxs)(t_,{children:[(0,I.jsxs)(n_,{children:[(0,I.jsxs)(r_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(i_,{children:`Work Experience Projects`}),(0,I.jsx)(a_,{children:`오마이컴퍼니 인턴 기간 동안 수행한 프론트엔드 및 백엔드 프로젝트입니다.`})]}),(0,I.jsx)(o_,{children:fg.map((e,t)=>(0,I.jsx)(Ug,{project:e,index:t},e.id))})]}),(0,I.jsxs)(n_,{children:[(0,I.jsxs)(r_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(i_,{children:`Personal Projects`}),(0,I.jsx)(a_,{children:`실제 문제를 해결하며 설계와 구조를 고민한 개인 프로젝트들입니다.`})]}),(0,I.jsx)(o_,{children:ug.map((e,t)=>(0,I.jsx)(Ug,{project:e,index:t},e.id))})]})]})}var e_=$g,t_=F.div`
+`;function n_(){return(0,I.jsxs)(i_,{children:[(0,I.jsxs)(a_,{children:[(0,I.jsxs)(o_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(s_,{children:`Work Experience Projects`}),(0,I.jsx)(c_,{children:`오마이컴퍼니 인턴 기간 동안 수행한 프론트엔드 및 백엔드 프로젝트입니다.`})]}),(0,I.jsx)(l_,{children:hg.map((e,t)=>(0,I.jsx)(Kg,{project:e,index:t},e.id))})]}),(0,I.jsxs)(a_,{children:[(0,I.jsxs)(o_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(s_,{children:`Personal Projects`}),(0,I.jsx)(c_,{children:`실제 문제를 해결하며 설계와 구조를 고민한 개인 프로젝트들입니다.`})]}),(0,I.jsx)(l_,{children:pg.map((e,t)=>(0,I.jsx)(Kg,{project:e,index:t},e.id))})]})]})}var r_=n_,i_=F.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: ${({theme:e})=>e.spacing.xl} ${({theme:e})=>e.spacing.md};
   min-height: calc(100vh - 64px);
-`,n_=F.section`
+`,a_=F.section`
   margin-bottom: ${({theme:e})=>e.spacing[`3xl`]};
 
   &:last-child {
     margin-bottom: 0;
   }
-`,r_=F.div`
+`,o_=F.div`
   text-align: center;
   margin-bottom: ${({theme:e})=>e.spacing.xl};
-`,i_=F.h1`
+`,s_=F.h1`
   font-size: ${({theme:e})=>e.typography.fontSize[`4xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
@@ -520,10 +540,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   }
-`,a_=F.p`
+`,c_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   color: ${({theme:e})=>e.colors.textSub};
-`,o_=F.div`
+`,l_=F.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: ${({theme:e})=>e.spacing.lg};
@@ -531,18 +551,18 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
-`;function s_(){let{id:e}=pt(),t=lt(),n=[...fg,...ug].find(t=>t.id===e);return n?(0,I.jsxs)(l_,{children:[(0,I.jsx)(d_,{onClick:()=>t(`/projects`),children:`← 목록으로`}),(0,I.jsxs)(f_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(p_,{children:n.title}),(0,I.jsxs)(m_,{children:[(0,I.jsx)(h_,{children:n.period}),(0,I.jsx)(g_,{children:n.team})]}),(0,I.jsx)(__,{children:n.summary})]}),(0,I.jsxs)(v_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(y_,{children:n.problem.title}),(0,I.jsx)(b_,{children:n.problem.description})]}),(0,I.jsxs)(v_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(y_,{children:n.solution.title}),(0,I.jsx)(x_,{children:n.solution.items.map((e,t)=>(0,I.jsxs)(S_,{children:[(0,I.jsx)(C_,{children:e.subtitle}),(0,I.jsx)(w_,{children:e.detail})]},t))})]}),(0,I.jsxs)(v_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(y_,{children:`내가 한 일`}),(0,I.jsx)(T_,{children:n.myRole.map((e,t)=>(0,I.jsx)(E_,{children:e},t))})]}),(0,I.jsxs)(v_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(y_,{children:`기술 스택`}),(0,I.jsx)(D_,{children:n.tech.map((e,t)=>(0,I.jsx)(O_,{children:e},t))})]}),(n.links.github||n.links.demo)&&(0,I.jsxs)(k_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[n.links.github&&(0,I.jsx)(A_,{href:n.links.github,target:`_blank`,rel:`noopener noreferrer`,children:`GitHub 보기`}),n.links.demo&&(0,I.jsx)(A_,{href:n.links.demo,target:`_blank`,rel:`noopener noreferrer`,children:`Live Demo`})]})]}):(0,I.jsxs)(l_,{children:[(0,I.jsx)(u_,{children:`프로젝트를 찾을 수 없습니다.`}),(0,I.jsx)(d_,{onClick:()=>t(`/projects`),children:`목록으로 돌아가기`})]})}var c_=s_,l_=F.div`
+`;function u_(){let{id:e}=pt(),t=lt(),n=[...hg,...pg].find(t=>t.id===e);return n?(0,I.jsxs)(f_,{children:[(0,I.jsx)(m_,{onClick:()=>t(`/projects`),children:`← 목록으로`}),(0,I.jsxs)(h_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(g_,{children:n.title}),(0,I.jsxs)(__,{children:[(0,I.jsx)(v_,{children:n.period}),(0,I.jsx)(y_,{children:n.team})]}),(0,I.jsx)(b_,{children:n.summary})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:n.problem.title}),(0,I.jsx)(C_,{children:n.problem.description})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:n.solution.title}),(0,I.jsx)(w_,{children:n.solution.items.map((e,t)=>(0,I.jsxs)(T_,{children:[(0,I.jsx)(E_,{children:e.subtitle}),(0,I.jsx)(D_,{children:e.detail})]},t))})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:`내가 한 일`}),(0,I.jsx)(O_,{children:n.myRole.map((e,t)=>(0,I.jsx)(k_,{children:e},t))})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:`기술 스택`}),(0,I.jsx)(A_,{children:n.tech.map((e,t)=>(0,I.jsx)(j_,{children:e},t))})]}),(n.links.github||n.links.demo)&&(0,I.jsxs)(M_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[n.links.github&&(0,I.jsx)(N_,{href:n.links.github,target:`_blank`,rel:`noopener noreferrer`,children:`GitHub 보기`}),n.links.demo&&(0,I.jsx)(N_,{href:n.links.demo,target:`_blank`,rel:`noopener noreferrer`,children:`Live Demo`})]})]}):(0,I.jsxs)(f_,{children:[(0,I.jsx)(p_,{children:`프로젝트를 찾을 수 없습니다.`}),(0,I.jsx)(m_,{onClick:()=>t(`/projects`),children:`목록으로 돌아가기`})]})}var d_=u_,f_=F.div`
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
   padding: ${({theme:e})=>e.spacing.xl} ${({theme:e})=>e.spacing.md};
   min-height: calc(100vh - 64px);
-`,u_=F.div`
+`,p_=F.div`
   text-align: center;
   padding: ${({theme:e})=>e.spacing[`3xl`]} 0;
   font-size: ${({theme:e})=>e.typography.fontSize.xl};
   color: ${({theme:e})=>e.colors.textSub};
-`,d_=F.button`
+`,m_=F.button`
   display: inline-flex;
   align-items: center;
   gap: ${({theme:e})=>e.spacing.xs};
@@ -557,11 +577,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     color: ${({theme:e})=>e.colors.primary};
     background-color: ${({theme:e})=>e.colors.primaryAlpha};
   }
-`,f_=F.header`
+`,h_=F.header`
   margin-bottom: ${({theme:e})=>e.spacing[`2xl`]};
   padding-bottom: ${({theme:e})=>e.spacing.xl};
   border-bottom: 1px solid ${({theme:e})=>e.colors.border};
-`,p_=F.h1`
+`,g_=F.h1`
   font-size: ${({theme:e})=>e.typography.fontSize[`4xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
@@ -571,58 +591,58 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   }
-`,m_=F.div`
+`,__=F.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.xs};
   margin-bottom: ${({theme:e})=>e.spacing.md};
   align-items: flex-start;
-`,h_=F.span`
+`,v_=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
   font-family: ${({theme:e})=>e.typography.fontFamily.mono};
-`,g_=F.span`
+`,y_=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
-`,__=F.p`
+`,b_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.primary};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
-`,v_=F.section`
+`,x_=F.section`
   margin-bottom: ${({theme:e})=>e.spacing[`2xl`]};
-`,y_=F.h2`
+`,S_=F.h2`
   font-size: ${({theme:e})=>e.typography.fontSize[`2xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.lg};
-`,b_=F.p`
+`,C_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`,x_=F.div`
+`,w_=F.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.xl};
-`,S_=F.div`
+`,T_=F.div`
   padding: ${({theme:e})=>e.spacing.lg};
   background-color: ${({theme:e})=>e.colors.surface};
   border-left: 3px solid ${({theme:e})=>e.colors.primary};
   border-radius: 6px;
-`,C_=F.h3`
+`,E_=F.h3`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   font-weight: ${({theme:e})=>e.typography.fontWeight.semibold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.sm};
-`,w_=F.p`
+`,D_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`,T_=F.ul`
+`,O_=F.ul`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.sm};
-`,E_=F.li`
+`,k_=F.li`
   padding-left: ${({theme:e})=>e.spacing.md};
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
@@ -636,11 +656,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     color: ${({theme:e})=>e.colors.primary};
     font-weight: bold;
   }
-`,D_=F.div`
+`,A_=F.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({theme:e})=>e.spacing.sm};
-`,O_=F.span`
+`,j_=F.span`
   padding: ${({theme:e})=>e.spacing.xs} ${({theme:e})=>e.spacing.sm};
   background-color: ${({theme:e})=>e.colors.primaryAlpha};
   color: ${({theme:e})=>e.colors.primaryLight};
@@ -648,13 +668,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   border: 1px solid ${({theme:e})=>e.colors.primary}33;
-`,k_=F.section`
+`,M_=F.section`
   display: flex;
   gap: ${({theme:e})=>e.spacing.md};
   padding-top: ${({theme:e})=>e.spacing.xl};
   border-top: 1px solid ${({theme:e})=>e.colors.border};
   flex-wrap: wrap;
-`,A_=F.a`
+`,N_=F.a`
   padding: ${({theme:e})=>e.spacing.sm} ${({theme:e})=>e.spacing.lg};
   background-color: ${({$primary:e,theme:t})=>e?t.colors.primary:t.colors.surface};
   color: ${({$primary:e,theme:t})=>e?t.colors.background:t.colors.textMain};
@@ -670,4 +690,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     transform: translateY(-2px);
     background-color: ${({$primary:e,theme:t})=>e?t.colors.primaryDark:t.colors.hover};
   }
-`;function j_(){return(0,I.jsxs)(Ia,{theme:Ka,children:[(0,I.jsx)(qa,{}),(0,I.jsx)(wn,{children:(0,I.jsx)(Bt,{children:(0,I.jsxs)(Rt,{path:`/`,element:(0,I.jsx)(Kh,{}),children:[(0,I.jsx)(Rt,{index:!0,element:(0,I.jsx)(Vg,{})}),(0,I.jsx)(Rt,{path:`projects`,element:(0,I.jsx)(e_,{})}),(0,I.jsx)(Rt,{path:`projects/:id`,element:(0,I.jsx)(c_,{})})]})})})]})}var M_=j_;(0,y.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(b.StrictMode,{children:(0,I.jsx)(M_,{})}));
+`;function P_(){return(0,I.jsxs)(Ia,{theme:Ka,children:[(0,I.jsx)(qa,{}),(0,I.jsx)(wn,{children:(0,I.jsx)(Bt,{children:(0,I.jsxs)(Rt,{path:`/`,element:(0,I.jsx)(Yh,{}),children:[(0,I.jsx)(Rt,{index:!0,element:(0,I.jsx)(Wg,{})}),(0,I.jsx)(Rt,{path:`projects`,element:(0,I.jsx)(r_,{})}),(0,I.jsx)(Rt,{path:`projects/:id`,element:(0,I.jsx)(d_,{})})]})})})]})}var F_=P_;(0,y.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(b.StrictMode,{children:(0,I.jsx)(F_,{})}));
