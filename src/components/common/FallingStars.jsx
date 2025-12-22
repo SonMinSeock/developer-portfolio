@@ -15,11 +15,11 @@ function generateStars(count = 20) {
       id: i,
       left: `${Math.random() * 100}%`,         // 0-100% 전체 화면
       top: `${Math.random() * 100}%`,          // 0-100% 전체 높이에서 시작
-      delay: Math.random() * 8,                 // 0-8초 시작 딜레이 (더 분산)
-      duration: Math.random() * 3 + 3,          // 3-6초 애니메이션 시간
-      distance: Math.random() * 500 + 800,      // 800-1300px 이동 거리
+      delay: Math.random() * 12,                // 0-12초 시작 딜레이 (더 고르게 분산)
+      duration: Math.random() * 5 + 6,          // 6-11초 애니메이션 시간 (더 느리게)
+      distance: Math.random() * 300 + 400,      // 400-700px 이동 거리 (더 부드럽게)
       size: Math.random() * 2 + 1,              // 1-3px 별 크기
-      repeatDelay: Math.random() * 2,           // 0-2초 반복 대기 (짧게)
+      repeatDelay: Math.random() * 3 + 1,       // 1-4초 반복 대기
     });
   }
 
@@ -52,7 +52,7 @@ function FallingStars() {
             delay: star.delay,
             repeat: Infinity,
             repeatDelay: star.repeatDelay,
-            ease: 'linear',
+            ease: 'easeOut',
           }}
         />
       ))}
