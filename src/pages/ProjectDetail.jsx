@@ -1,12 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { projects } from '../data/projects';
+import { projects, workExperienceProjects } from '../data/projects';
 
 function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.id === id);
+
+  // 일 경험 프로젝트와 개인 프로젝트 모두에서 검색
+  const allProjects = [...workExperienceProjects, ...projects];
+  const project = allProjects.find((p) => p.id === id);
 
   if (!project) {
     return (
