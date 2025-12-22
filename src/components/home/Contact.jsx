@@ -81,7 +81,6 @@ export default Contact;
 
 const Section = styled.section`
   padding: ${({theme}) => theme.spacing["3xl"]} 0;
-  background-color: ${({theme}) => theme.colors.background};
 `;
 
 const Container = styled.div`
