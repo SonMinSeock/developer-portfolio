@@ -157,8 +157,8 @@ export const experience = {
       detail: "네이버 검색 API 기반 스토어 정보 자동 수집 시스템 개발. JPA Specification을 활용한 고급 검색 기능, Company CRUD API, 이메일/메시지 일괄 발송 시스템을 구현하여 영업 효율을 향상시켰습니다."
     },
     {
-      title: "세 번째 프로젝트 (준비 중)",
-      detail: "세 번째 프로젝트 내용이 추가될 예정입니다."
+      title: "RAG 챗봇 API (Backend)",
+      detail: "GPT-4o-mini 기반 고객지원 챗봇 백엔드 개발. 하이브리드 PDF 파싱으로 테이블 정확도 95% 달성, 대화 맥락 기반 쿼리 재작성, SSE 스트리밍 응답 구조 개선, 문서 로딩 성능 30배 향상(5분→10초)을 구현했습니다."
     }
   ]
 };
