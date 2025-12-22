@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import {ThemeProvider} from "styled-components";
 import {theme} from "./styles/theme";
 import {GlobalStyle} from "./styles/GlobalStyle";
@@ -11,7 +11,7 @@ function App() {
   return (
       <ThemeProvider theme={theme}>
         <GlobalStyle/>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Layout/>}>
               <Route index element={<Home/>}/>
@@ -19,7 +19,7 @@ function App() {
               <Route path="projects/:id" element={<ProjectDetail/>}/>
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
   );
 }
