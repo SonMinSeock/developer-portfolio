@@ -411,7 +411,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`;function Ng(){return(0,I.jsx)(Fg,{id:`contact`,children:(0,I.jsxs)(Ig,{children:[(0,I.jsx)(Lg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Contact`}),(0,I.jsx)(Rg,{as:zh.p,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:`함께 일하고 싶으신가요? 편하게 연락주세요.`}),(0,I.jsxs)(zg,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.2},children:[(0,I.jsxs)(Bg,{href:`mailto:${gg.email}`,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Email`}),(0,I.jsx)(Hg,{children:gg.email})]}),gg.phone&&(0,I.jsxs)(Bg,{target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Phone Number`}),(0,I.jsx)(Hg,{children:gg.phone})]}),(0,I.jsxs)(Bg,{href:gg.github,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`GitHub`}),(0,I.jsx)(Hg,{children:gg.github})]}),gg.blog&&(0,I.jsxs)(Bg,{href:gg.blog,target:`_blank`,rel:`noopener noreferrer`,children:[(0,I.jsx)(Vg,{children:`Blog`}),(0,I.jsx)(Hg,{children:gg.blog})]})]})]})})}var Pg=Ng,Fg=F.section`
+`;function Ng(){let[e,t]=(0,b.useState)(null),n=async(e,n)=>{try{await navigator.clipboard.writeText(e),t(n),setTimeout(()=>t(null),2e3)}catch(e){console.error(`Failed to copy:`,e)}};return(0,I.jsx)(Fg,{id:`contact`,children:(0,I.jsxs)(Ig,{children:[(0,I.jsx)(Lg,{as:zh.h2,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:`Contact`}),(0,I.jsx)(Rg,{as:zh.p,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.1},children:`함께 일하고 싶으신가요? 편하게 연락주세요.`}),(0,I.jsxs)(zg,{as:zh.div,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:.2},children:[(0,I.jsxs)(Bg,{children:[(0,I.jsx)(Vg,{children:`Email`}),(0,I.jsx)(Hg,{href:`mailto:${gg.email}`,children:gg.email})]}),gg.phone&&(0,I.jsxs)(Bg,{onClick:()=>n(gg.phone,`phone`),$clickable:!0,children:[(0,I.jsxs)(Vg,{children:[`Phone Number `,e===`phone`&&(0,I.jsx)(Wg,{children:`✓ 복사됨`})]}),(0,I.jsx)(Ug,{children:gg.phone})]}),(0,I.jsxs)(Bg,{children:[(0,I.jsx)(Vg,{children:`GitHub`}),(0,I.jsx)(Hg,{href:gg.github,target:`_blank`,rel:`noopener noreferrer`,children:gg.github})]}),gg.blog&&(0,I.jsxs)(Bg,{children:[(0,I.jsx)(Vg,{children:`Blog`}),(0,I.jsx)(Hg,{href:gg.blog,target:`_blank`,rel:`noopener noreferrer`,children:gg.blog})]})]})]})})}var Pg=Ng,Fg=F.section`
   padding: ${({theme:e})=>e.spacing[`3xl`]} 0;
 `,Ig=F.div`
   max-width: 800px;
@@ -433,14 +433,14 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: ${({theme:e})=>e.spacing.md};
   margin-top: ${({theme:e})=>e.spacing.xl};
-`,Bg=F.a`
-  display: block;
+`,Bg=F.div`
   padding: ${({theme:e})=>e.spacing.lg};
   background-color: ${({theme:e})=>e.colors.surface};
   border: 1px solid ${({theme:e})=>e.colors.border};
   border-radius: 12px;
   transition: all ${({theme:e})=>e.transition.normal};
   text-align: left;
+  cursor: ${({$clickable:e})=>e?`pointer`:`default`};
 
   &:hover {
     transform: translateY(-4px);
@@ -454,12 +454,38 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   text-transform: uppercase;
   letter-spacing: 0.05em;
-`,Hg=F.div`
+  display: flex;
+  align-items: center;
+  gap: ${({theme:e})=>e.spacing.xs};
+`,Hg=F.a`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   color: ${({theme:e})=>e.colors.primary};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   word-break: break-all;
-`;function Ug(){let e=ot();return(0,b.useEffect)(()=>{if(e.hash){let t=e.hash.replace(`#`,``);setTimeout(()=>{Ja(t)},100)}},[e.hash]),(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(eg,{}),(0,I.jsx)(vg,{}),(0,I.jsx)(Pg,{})]})}var Wg=Ug;function Gg({project:e,index:t}){return(0,I.jsxs)(qg,{to:`/projects/${e.id}`,as:zh(Dn),initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:t*.1},children:[(0,I.jsx)(Jg,{children:(0,I.jsx)(`img`,{src:e.thumbnail,alt:e.title})}),(0,I.jsxs)(Yg,{children:[(0,I.jsxs)(Xg,{children:[(0,I.jsx)(Zg,{children:e.title}),(0,I.jsx)(Qg,{children:e.period})]}),(0,I.jsx)($g,{children:e.summary}),(0,I.jsxs)(e_,{children:[e.tech.slice(0,4).map((e,t)=>(0,I.jsx)(t_,{children:e},t)),e.tech.length>4&&(0,I.jsxs)(t_,{children:[`+`,e.tech.length-4]})]})]})]})}var Kg=Gg,qg=F(Dn)`
+  text-decoration: none;
+  display: block;
+  transition: all ${({theme:e})=>e.transition.normal};
+
+  &:hover {
+    text-decoration: underline;
+    color: ${({theme:e})=>e.colors.primaryLight};
+  }
+`,Ug=F.div`
+  font-size: ${({theme:e})=>e.typography.fontSize.base};
+  color: ${({theme:e})=>e.colors.primary};
+  font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
+  word-break: break-all;
+  transition: all ${({theme:e})=>e.transition.normal};
+
+  ${Bg}:hover & {
+    text-decoration: underline;
+    color: ${({theme:e})=>e.colors.primaryLight};
+  }
+`,Wg=F.span`
+  color: ${({theme:e})=>e.colors.primary};
+  font-size: ${({theme:e})=>e.typography.fontSize.xs};
+  font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
+`;function Gg(){let e=ot();return(0,b.useEffect)(()=>{if(e.hash){let t=e.hash.replace(`#`,``);setTimeout(()=>{Ja(t)},100)}},[e.hash]),(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(eg,{}),(0,I.jsx)(vg,{}),(0,I.jsx)(Pg,{})]})}var Kg=Gg;function qg({project:e,index:t}){return(0,I.jsxs)(Yg,{to:`/projects/${e.id}`,as:zh(Dn),initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:t*.1},children:[(0,I.jsx)(Xg,{children:(0,I.jsx)(`img`,{src:e.thumbnail,alt:e.title})}),(0,I.jsxs)(Zg,{children:[(0,I.jsxs)(Qg,{children:[(0,I.jsx)($g,{children:e.title}),(0,I.jsx)(e_,{children:e.period})]}),(0,I.jsx)(t_,{children:e.summary}),(0,I.jsxs)(n_,{children:[e.tech.slice(0,4).map((e,t)=>(0,I.jsx)(r_,{children:e},t)),e.tech.length>4&&(0,I.jsxs)(r_,{children:[`+`,e.tech.length-4]})]})]})]})}var Jg=qg,Yg=F(Dn)`
   display: block;
   background-color: ${({theme:e})=>e.colors.surface};
   border: 1px solid ${({theme:e})=>e.colors.border};
@@ -471,7 +497,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     transform: translateY(-4px);
     border-color: ${({theme:e})=>e.colors.primary};
   }
-`,Jg=F.div`
+`,Xg=F.div`
   width: 100%;
   aspect-ratio: 16 / 9;
   background-color: ${({theme:e})=>e.colors.hover};
@@ -482,33 +508,33 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     height: 100%;
     object-fit: cover;
   }
-`,Yg=F.div`
+`,Zg=F.div`
   padding: ${({theme:e})=>e.spacing.lg};
-`,Xg=F.div`
+`,Qg=F.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: ${({theme:e})=>e.spacing.sm};
   margin-bottom: ${({theme:e})=>e.spacing.sm};
-`,Zg=F.h3`
+`,$g=F.h3`
   font-size: ${({theme:e})=>e.typography.fontSize.xl};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
-`,Qg=F.span`
+`,e_=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.xs};
   color: ${({theme:e})=>e.colors.textSub};
   font-family: ${({theme:e})=>e.typography.fontFamily.mono};
   white-space: nowrap;
-`,$g=F.p`
+`,t_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
   margin-bottom: ${({theme:e})=>e.spacing.md};
-`,e_=F.div`
+`,n_=F.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({theme:e})=>e.spacing.xs};
-`,t_=F.span`
+`,r_=F.span`
   padding: 4px 12px;
   background-color: ${({theme:e})=>e.colors.primaryAlpha};
   color: ${({theme:e})=>e.colors.primaryLight};
@@ -516,22 +542,22 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.xs};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   border: 1px solid ${({theme:e})=>e.colors.primary}33;
-`;function n_(){return(0,I.jsxs)(i_,{children:[(0,I.jsxs)(a_,{children:[(0,I.jsxs)(o_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(s_,{children:`Work Experience Projects`}),(0,I.jsx)(c_,{children:`오마이컴퍼니 인턴 기간 동안 수행한 프론트엔드 및 백엔드 프로젝트입니다.`})]}),(0,I.jsx)(l_,{children:hg.map((e,t)=>(0,I.jsx)(Kg,{project:e,index:t},e.id))})]}),(0,I.jsxs)(a_,{children:[(0,I.jsxs)(o_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(s_,{children:`Personal Projects`}),(0,I.jsx)(c_,{children:`실제 문제를 해결하며 설계와 구조를 고민한 개인 프로젝트들입니다.`})]}),(0,I.jsx)(l_,{children:pg.map((e,t)=>(0,I.jsx)(Kg,{project:e,index:t},e.id))})]})]})}var r_=n_,i_=F.div`
+`;function i_(){return(0,I.jsxs)(o_,{children:[(0,I.jsxs)(s_,{children:[(0,I.jsxs)(c_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(l_,{children:`Work Experience Projects`}),(0,I.jsx)(u_,{children:`오마이컴퍼니 인턴 기간 동안 수행한 프론트엔드 및 백엔드 프로젝트입니다.`})]}),(0,I.jsx)(d_,{children:hg.map((e,t)=>(0,I.jsx)(Jg,{project:e,index:t},e.id))})]}),(0,I.jsxs)(s_,{children:[(0,I.jsxs)(c_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(l_,{children:`Personal Projects`}),(0,I.jsx)(u_,{children:`실제 문제를 해결하며 설계와 구조를 고민한 개인 프로젝트들입니다.`})]}),(0,I.jsx)(d_,{children:pg.map((e,t)=>(0,I.jsx)(Jg,{project:e,index:t},e.id))})]})]})}var a_=i_,o_=F.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: ${({theme:e})=>e.spacing.xl} ${({theme:e})=>e.spacing.md};
   min-height: calc(100vh - 64px);
-`,a_=F.section`
+`,s_=F.section`
   margin-bottom: ${({theme:e})=>e.spacing[`3xl`]};
 
   &:last-child {
     margin-bottom: 0;
   }
-`,o_=F.div`
+`,c_=F.div`
   text-align: center;
   margin-bottom: ${({theme:e})=>e.spacing.xl};
-`,s_=F.h1`
+`,l_=F.h1`
   font-size: ${({theme:e})=>e.typography.fontSize[`4xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
@@ -540,10 +566,10 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   }
-`,c_=F.p`
+`,u_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   color: ${({theme:e})=>e.colors.textSub};
-`,l_=F.div`
+`,d_=F.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: ${({theme:e})=>e.spacing.lg};
@@ -551,18 +577,18 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
-`;function u_(){let{id:e}=pt(),t=lt(),n=[...hg,...pg].find(t=>t.id===e);return n?(0,I.jsxs)(f_,{children:[(0,I.jsx)(m_,{onClick:()=>t(`/projects`),children:`← 목록으로`}),(0,I.jsxs)(h_,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(g_,{children:n.title}),(0,I.jsxs)(__,{children:[(0,I.jsx)(v_,{children:n.period}),(0,I.jsx)(y_,{children:n.team})]}),(0,I.jsx)(b_,{children:n.summary})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:n.problem.title}),(0,I.jsx)(C_,{children:n.problem.description})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:n.solution.title}),(0,I.jsx)(w_,{children:n.solution.items.map((e,t)=>(0,I.jsxs)(T_,{children:[(0,I.jsx)(E_,{children:e.subtitle}),(0,I.jsx)(D_,{children:e.detail})]},t))})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:`내가 한 일`}),(0,I.jsx)(O_,{children:n.myRole.map((e,t)=>(0,I.jsx)(k_,{children:e},t))})]}),(0,I.jsxs)(x_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(S_,{children:`기술 스택`}),(0,I.jsx)(A_,{children:n.tech.map((e,t)=>(0,I.jsx)(j_,{children:e},t))})]}),(n.links.github||n.links.demo)&&(0,I.jsxs)(M_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[n.links.github&&(0,I.jsx)(N_,{href:n.links.github,target:`_blank`,rel:`noopener noreferrer`,children:`GitHub 보기`}),n.links.demo&&(0,I.jsx)(N_,{href:n.links.demo,target:`_blank`,rel:`noopener noreferrer`,children:`Live Demo`})]})]}):(0,I.jsxs)(f_,{children:[(0,I.jsx)(p_,{children:`프로젝트를 찾을 수 없습니다.`}),(0,I.jsx)(m_,{onClick:()=>t(`/projects`),children:`목록으로 돌아가기`})]})}var d_=u_,f_=F.div`
+`;function f_(){let{id:e}=pt(),t=lt(),n=[...hg,...pg].find(t=>t.id===e);return n?(0,I.jsxs)(m_,{children:[(0,I.jsx)(g_,{onClick:()=>t(`/projects`),children:`← 목록으로`}),(0,I.jsxs)(__,{as:zh.div,initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},children:[(0,I.jsx)(v_,{children:n.title}),(0,I.jsxs)(y_,{children:[(0,I.jsx)(b_,{children:n.period}),(0,I.jsx)(x_,{children:n.team})]}),(0,I.jsx)(S_,{children:n.summary})]}),(0,I.jsxs)(C_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(w_,{children:n.problem.title}),(0,I.jsx)(T_,{children:n.problem.description})]}),(0,I.jsxs)(C_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(w_,{children:n.solution.title}),(0,I.jsx)(E_,{children:n.solution.items.map((e,t)=>(0,I.jsxs)(D_,{children:[(0,I.jsx)(O_,{children:e.subtitle}),(0,I.jsx)(k_,{children:e.detail})]},t))})]}),(0,I.jsxs)(C_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(w_,{children:`내가 한 일`}),(0,I.jsx)(A_,{children:n.myRole.map((e,t)=>(0,I.jsx)(j_,{children:e},t))})]}),(0,I.jsxs)(C_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[(0,I.jsx)(w_,{children:`기술 스택`}),(0,I.jsx)(M_,{children:n.tech.map((e,t)=>(0,I.jsx)(N_,{children:e},t))})]}),(n.links.github||n.links.demo)&&(0,I.jsxs)(P_,{as:zh.section,initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},children:[n.links.github&&(0,I.jsx)(F_,{href:n.links.github,target:`_blank`,rel:`noopener noreferrer`,children:`GitHub 보기`}),n.links.demo&&(0,I.jsx)(F_,{href:n.links.demo,target:`_blank`,rel:`noopener noreferrer`,children:`Live Demo`})]})]}):(0,I.jsxs)(m_,{children:[(0,I.jsx)(h_,{children:`프로젝트를 찾을 수 없습니다.`}),(0,I.jsx)(g_,{onClick:()=>t(`/projects`),children:`목록으로 돌아가기`})]})}var p_=f_,m_=F.div`
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
   padding: ${({theme:e})=>e.spacing.xl} ${({theme:e})=>e.spacing.md};
   min-height: calc(100vh - 64px);
-`,p_=F.div`
+`,h_=F.div`
   text-align: center;
   padding: ${({theme:e})=>e.spacing[`3xl`]} 0;
   font-size: ${({theme:e})=>e.typography.fontSize.xl};
   color: ${({theme:e})=>e.colors.textSub};
-`,m_=F.button`
+`,g_=F.button`
   display: inline-flex;
   align-items: center;
   gap: ${({theme:e})=>e.spacing.xs};
@@ -577,11 +603,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     color: ${({theme:e})=>e.colors.primary};
     background-color: ${({theme:e})=>e.colors.primaryAlpha};
   }
-`,h_=F.header`
+`,__=F.header`
   margin-bottom: ${({theme:e})=>e.spacing[`2xl`]};
   padding-bottom: ${({theme:e})=>e.spacing.xl};
   border-bottom: 1px solid ${({theme:e})=>e.colors.border};
-`,g_=F.h1`
+`,v_=F.h1`
   font-size: ${({theme:e})=>e.typography.fontSize[`4xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
@@ -591,58 +617,58 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   @media (max-width: ${({theme:e})=>e.breakpoints.tablet}) {
     font-size: ${({theme:e})=>e.typography.fontSize[`3xl`]};
   }
-`,__=F.div`
+`,y_=F.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.xs};
   margin-bottom: ${({theme:e})=>e.spacing.md};
   align-items: flex-start;
-`,v_=F.span`
+`,b_=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
   font-family: ${({theme:e})=>e.typography.fontFamily.mono};
-`,y_=F.span`
+`,x_=F.span`
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   color: ${({theme:e})=>e.colors.textSub};
-`,b_=F.p`
+`,S_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.primary};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
-`,x_=F.section`
+`,C_=F.section`
   margin-bottom: ${({theme:e})=>e.spacing[`2xl`]};
-`,S_=F.h2`
+`,w_=F.h2`
   font-size: ${({theme:e})=>e.typography.fontSize[`2xl`]};
   font-weight: ${({theme:e})=>e.typography.fontWeight.bold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.lg};
-`,C_=F.p`
+`,T_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`,w_=F.div`
+`,E_=F.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.xl};
-`,T_=F.div`
+`,D_=F.div`
   padding: ${({theme:e})=>e.spacing.lg};
   background-color: ${({theme:e})=>e.colors.surface};
   border-left: 3px solid ${({theme:e})=>e.colors.primary};
   border-radius: 6px;
-`,E_=F.h3`
+`,O_=F.h3`
   font-size: ${({theme:e})=>e.typography.fontSize.lg};
   font-weight: ${({theme:e})=>e.typography.fontWeight.semibold};
   color: ${({theme:e})=>e.colors.textMain};
   margin-bottom: ${({theme:e})=>e.spacing.sm};
-`,D_=F.p`
+`,k_=F.p`
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
   color: ${({theme:e})=>e.colors.textSub};
-`,O_=F.ul`
+`,A_=F.ul`
   display: flex;
   flex-direction: column;
   gap: ${({theme:e})=>e.spacing.sm};
-`,k_=F.li`
+`,j_=F.li`
   padding-left: ${({theme:e})=>e.spacing.md};
   font-size: ${({theme:e})=>e.typography.fontSize.base};
   line-height: ${({theme:e})=>e.typography.lineHeight.relaxed};
@@ -656,11 +682,11 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     color: ${({theme:e})=>e.colors.primary};
     font-weight: bold;
   }
-`,A_=F.div`
+`,M_=F.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({theme:e})=>e.spacing.sm};
-`,j_=F.span`
+`,N_=F.span`
   padding: ${({theme:e})=>e.spacing.xs} ${({theme:e})=>e.spacing.sm};
   background-color: ${({theme:e})=>e.colors.primaryAlpha};
   color: ${({theme:e})=>e.colors.primaryLight};
@@ -668,13 +694,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   font-size: ${({theme:e})=>e.typography.fontSize.sm};
   font-weight: ${({theme:e})=>e.typography.fontWeight.medium};
   border: 1px solid ${({theme:e})=>e.colors.primary}33;
-`,M_=F.section`
+`,P_=F.section`
   display: flex;
   gap: ${({theme:e})=>e.spacing.md};
   padding-top: ${({theme:e})=>e.spacing.xl};
   border-top: 1px solid ${({theme:e})=>e.colors.border};
   flex-wrap: wrap;
-`,N_=F.a`
+`,F_=F.a`
   padding: ${({theme:e})=>e.spacing.sm} ${({theme:e})=>e.spacing.lg};
   background-color: ${({$primary:e,theme:t})=>e?t.colors.primary:t.colors.surface};
   color: ${({$primary:e,theme:t})=>e?t.colors.background:t.colors.textMain};
@@ -690,4 +716,4 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
     transform: translateY(-2px);
     background-color: ${({$primary:e,theme:t})=>e?t.colors.primaryDark:t.colors.hover};
   }
-`;function P_(){return(0,I.jsxs)(Ia,{theme:Ka,children:[(0,I.jsx)(qa,{}),(0,I.jsx)(wn,{children:(0,I.jsx)(Bt,{children:(0,I.jsxs)(Rt,{path:`/`,element:(0,I.jsx)(Yh,{}),children:[(0,I.jsx)(Rt,{index:!0,element:(0,I.jsx)(Wg,{})}),(0,I.jsx)(Rt,{path:`projects`,element:(0,I.jsx)(r_,{})}),(0,I.jsx)(Rt,{path:`projects/:id`,element:(0,I.jsx)(d_,{})})]})})})]})}var F_=P_;(0,y.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(b.StrictMode,{children:(0,I.jsx)(F_,{})}));
+`;function I_(){return(0,I.jsxs)(Ia,{theme:Ka,children:[(0,I.jsx)(qa,{}),(0,I.jsx)(wn,{children:(0,I.jsx)(Bt,{children:(0,I.jsxs)(Rt,{path:`/`,element:(0,I.jsx)(Yh,{}),children:[(0,I.jsx)(Rt,{index:!0,element:(0,I.jsx)(Kg,{})}),(0,I.jsx)(Rt,{path:`projects`,element:(0,I.jsx)(a_,{})}),(0,I.jsx)(Rt,{path:`projects/:id`,element:(0,I.jsx)(p_,{})})]})})})]})}var L_=I_;(0,y.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(b.StrictMode,{children:(0,I.jsx)(L_,{})}));
