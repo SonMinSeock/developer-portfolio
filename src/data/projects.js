@@ -166,7 +166,7 @@ export const workExperienceProjects = [
     summary: "네이버 검색 API 기반 스토어 정보 자동 수집 및 관리 시스템",
     thumbnail: "./images/store-collection.png",
     period: "2025.06 - 2025.09",
-    team: "백엔드 1명",
+    team: "프론트엔드 1명, 백엔드 1명",
 
     problem: {
       title: "문제 상황",
@@ -209,7 +209,7 @@ export const workExperienceProjects = [
     summary: "GPT-4o-mini 기반 크라우드펀딩 고객지원 챗봇 백엔드",
     thumbnail: "./images/rag-chatbot.png",
     period: "2025.10 - 2025.12",
-    team: "백엔드 1명",
+    team: "프론트 1명, 백엔드 1명",
 
     problem: {
       title: "문제 상황",
