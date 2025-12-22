@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
+import { useState } from 'react';
 
 /**
  * 유성 데이터 생성 함수
@@ -27,11 +27,11 @@ function generateStars(count = 20) {
 }
 
 function FallingStars() {
-  // 유성 데이터를 메모이제이션하여 리렌더링 시 재생성 방지
-  const stars = useMemo(() => {
-    const starCount = Math.floor(Math.random() * 21) + 30; // 30-50개로 증가
+  // useState로 컴포넌트 생성 시 한 번만 계산 (초기값으로 함수 전달)
+  const [stars] = useState(() => {
+    const starCount = Math.floor(Math.random() * 21) + 30; // 30-50개
     return generateStars(starCount);
-  }, []);
+  });
 
   return (
     <StarsContainer>
