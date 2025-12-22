@@ -1,8 +1,21 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import {contact} from "../../data/projects";
+import {useState} from "react";
 
 function Contact() {
+  const [copiedItem, setCopiedItem] = useState(null);
+
+  const handleCopy = async (text, label) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedItem(label);
+      setTimeout(() => setCopiedItem(null), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   return (
       <Section id="contact">
         <Container>
@@ -33,43 +46,36 @@ function Contact() {
               viewport={{once: true}}
               transition={{duration: 0.5, delay: 0.2}}
           >
-            <ContactItem
-                href={`mailto:${contact.email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <ContactItemWrapper>
               <ContactLabel>Email</ContactLabel>
-              <ContactValue>{contact.email}</ContactValue>
-            </ContactItem>
+              <ContactLink href={`mailto:${contact.email}`}>
+                {contact.email}
+              </ContactLink>
+            </ContactItemWrapper>
 
             {contact.phone && (
-                <ContactItem
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                  <ContactLabel>Phone Number</ContactLabel>
-                  <ContactValue>{contact.phone}</ContactValue>
-                </ContactItem>
+                <ContactItemWrapper onClick={() => handleCopy(contact.phone, "phone")} $clickable>
+                  <ContactLabel>
+                    Phone Number {copiedItem === "phone" && <CopiedText>✓ 복사됨</CopiedText>}
+                  </ContactLabel>
+                  <ClickableValue>{contact.phone}</ClickableValue>
+                </ContactItemWrapper>
             )}
 
-            <ContactItem
-                href={contact.github}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <ContactItemWrapper>
               <ContactLabel>GitHub</ContactLabel>
-              <ContactValue>{contact.github}</ContactValue>
-            </ContactItem>
+              <ContactLink href={contact.github} target="_blank" rel="noopener noreferrer">
+                {contact.github}
+              </ContactLink>
+            </ContactItemWrapper>
 
             {contact.blog && (
-                <ContactItem
-                    href={contact.blog}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <ContactItemWrapper>
                   <ContactLabel>Blog</ContactLabel>
-                  <ContactValue>{contact.blog}</ContactValue>
-                </ContactItem>
+                  <ContactLink href={contact.blog} target="_blank" rel="noopener noreferrer">
+                    {contact.blog}
+                  </ContactLink>
+                </ContactItemWrapper>
             )}
           </ContactList>
         </Container>
@@ -111,14 +117,14 @@ const ContactList = styled.div`
   margin-top: ${({theme}) => theme.spacing.xl};
 `;
 
-const ContactItem = styled.a`
-  display: block;
+const ContactItemWrapper = styled.div`
   padding: ${({theme}) => theme.spacing.lg};
   background-color: ${({theme}) => theme.colors.surface};
   border: 1px solid ${({theme}) => theme.colors.border};
   border-radius: 12px;
   transition: all ${({theme}) => theme.transition.normal};
   text-align: left;
+  cursor: ${({$clickable}) => $clickable ? "pointer" : "default"};
 
   &:hover {
     transform: translateY(-4px);
@@ -134,11 +140,41 @@ const ContactLabel = styled.div`
   font-weight: ${({theme}) => theme.typography.fontWeight.medium};
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.xs};
 `;
 
-const ContactValue = styled.div`
+const ContactLink = styled.a`
   font-size: ${({theme}) => theme.typography.fontSize.base};
   color: ${({theme}) => theme.colors.primary};
   font-weight: ${({theme}) => theme.typography.fontWeight.medium};
   word-break: break-all;
+  text-decoration: none;
+  display: block;
+  transition: all ${({theme}) => theme.transition.normal};
+
+  &:hover {
+    text-decoration: underline;
+    color: ${({theme}) => theme.colors.primaryLight};
+  }
+`;
+
+const ClickableValue = styled.div`
+  font-size: ${({theme}) => theme.typography.fontSize.base};
+  color: ${({theme}) => theme.colors.primary};
+  font-weight: ${({theme}) => theme.typography.fontWeight.medium};
+  word-break: break-all;
+  transition: all ${({theme}) => theme.transition.normal};
+
+  ${ContactItemWrapper}:hover & {
+    text-decoration: underline;
+    color: ${({theme}) => theme.colors.primaryLight};
+  }
+`;
+
+const CopiedText = styled.span`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: ${({theme}) => theme.typography.fontSize.xs};
+  font-weight: ${({theme}) => theme.typography.fontWeight.medium};
 `;
