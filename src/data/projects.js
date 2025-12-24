@@ -142,6 +142,10 @@ export const workExperienceProjects = [
           detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다."
         },
         {
+          subtitle: "MSW 기반 모킹 환경 구축 제안",
+          detail: "기존 JSP 기반 API 코드를 분석하여 MSW(Mock Service Worker)를 활용한 독립적인 프론트엔드 개발 환경을 제안. 백엔드 의존성을 낮추고 병렬 개발이 가능하도록 개선 방안을 제시했습니다."
+        },
+        {
           subtitle: "Chart.js 기반 통계 시각화",
           detail: "연간/일간 통계 데이터를 Chart.js로 시각화. vue-chartjs를 활용해 재사용 가능한 차트 컴포넌트를 구성하고, 관리자가 데이터를 직관적으로 파악할 수 있게 했습니다."
         }
