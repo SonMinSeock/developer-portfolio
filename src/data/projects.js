@@ -99,6 +99,7 @@ export const experience = {
   position: "플랫폼 개발자 인턴",
   period: "2025.06 - 2025.12",
   description: "크라우드펀딩 서비스의 프론트엔드 리뉴얼과 백엔드 API 개발을 담당했습니다.",
+  retrospectiveLink: "https://toothsome-raft-e05.notion.site/2cb952c99360806c910efe84ba41b6fc?source=copy_link",
 
   highlights: [
     {
