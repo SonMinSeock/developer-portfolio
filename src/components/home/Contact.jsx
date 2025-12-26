@@ -16,6 +16,14 @@ function Contact() {
     }
   };
 
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${contact.email}`;
+  };
+
+  const handleLinkClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
       <Section id="contact">
         <Container>
@@ -46,11 +54,9 @@ function Contact() {
               viewport={{once: true}}
               transition={{duration: 0.5, delay: 0.2}}
           >
-            <ContactItemWrapper>
+            <ContactItemWrapper onClick={handleEmailClick} $clickable>
               <ContactLabel>Email</ContactLabel>
-              <ContactLink href={`mailto:${contact.email}`}>
-                {contact.email}
-              </ContactLink>
+              <ClickableValue>{contact.email}</ClickableValue>
             </ContactItemWrapper>
 
             {contact.phone && (
@@ -62,19 +68,15 @@ function Contact() {
                 </ContactItemWrapper>
             )}
 
-            <ContactItemWrapper>
+            <ContactItemWrapper onClick={() => handleLinkClick(contact.github)} $clickable>
               <ContactLabel>GitHub</ContactLabel>
-              <ContactLink href={contact.github} target="_blank" rel="noopener noreferrer">
-                {contact.github}
-              </ContactLink>
+              <ClickableValue>{contact.github}</ClickableValue>
             </ContactItemWrapper>
 
             {contact.blog && (
-                <ContactItemWrapper>
+                <ContactItemWrapper onClick={() => handleLinkClick(contact.blog)} $clickable>
                   <ContactLabel>Blog</ContactLabel>
-                  <ContactLink href={contact.blog} target="_blank" rel="noopener noreferrer">
-                    {contact.blog}
-                  </ContactLink>
+                  <ClickableValue>{contact.blog}</ClickableValue>
                 </ContactItemWrapper>
             )}
           </ContactList>
@@ -143,21 +145,6 @@ const ContactLabel = styled.div`
   display: flex;
   align-items: center;
   gap: ${({theme}) => theme.spacing.xs};
-`;
-
-const ContactLink = styled.a`
-  font-size: ${({theme}) => theme.typography.fontSize.base};
-  color: ${({theme}) => theme.colors.primary};
-  font-weight: ${({theme}) => theme.typography.fontWeight.medium};
-  word-break: break-all;
-  text-decoration: none;
-  display: block;
-  transition: all ${({theme}) => theme.transition.normal};
-
-  &:hover {
-    text-decoration: underline;
-    color: ${({theme}) => theme.colors.primaryLight};
-  }
 `;
 
 const ClickableValue = styled.div`
