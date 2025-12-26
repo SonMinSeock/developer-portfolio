@@ -121,7 +121,7 @@ export const workExperienceProjects = [
   {
     id: "omc-admin-work",
     title: "Admin 리뉴얼 (Frontend)",
-    summary: "크라우드펀딩 서비스 관리자 화면 Vue 3 기반 전면 리뉴얼",
+    summary: "크라우드펀딩 서비스 관리자 화면 Vue 3 + TypeScript 기반 전면 리뉴얼",
     thumbnail: "./images/omc-admin.png",
     period: "2025.07 - 2025.12",
     team: "프론트엔드 2명",
@@ -143,8 +143,8 @@ export const workExperienceProjects = [
           detail: "API 호출 로직을 Composable 패턴으로 분리하여 코드 중복을 제거. 공통 컴포넌트(Button, Input, Modal)를 재사용 가능하게 설계하여 개발 속도를 향상시켰습니다."
         },
         {
-          subtitle: "MSW 기반 모킹 환경 구축 제안",
-          detail: "기존 JSP 기반 API 코드를 분석하여 MSW(Mock Service Worker)를 활용한 독립적인 프론트엔드 개발 환경을 제안. 백엔드 의존성을 낮추고 병렬 개발이 가능하도록 개선 방안을 제시했습니다."
+          subtitle: "MSW 기반 모킹 환경 구축",
+          detail: "MSW 핸들러로 모든 REST API를 모킹하여 백엔드 의존성 없이 독립적인 프론트엔드 개발 환경을 구축. 개발 단계에서 API 응답을 시뮬레이션하여 병렬 개발을 가능하게 했습니다."
         },
         {
           subtitle: "Chart.js 기반 통계 시각화",
@@ -161,7 +161,8 @@ export const workExperienceProjects = [
       "공통 컴포넌트 라이브러리 구축 및 코드 컨벤션 적용"
     ],
 
-    tech: ["Vue 3", "TypeScript", "Composition API", "Vue Router", "Vite", "Axios", "Bootstrap 5", "SCSS", "Chart.js"],
+    tech: ["Vue 3", "TypeScript", "Composition API", "Vue Router", "Vite", "Axios", "Bootstrap 5", "SCSS", "Chart.js",
+      "MSW"],
 
     links: {}
   },
