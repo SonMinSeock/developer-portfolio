@@ -184,7 +184,7 @@ export const workExperienceProjects = [
       items: [
         {
           subtitle: "네이버 검색 API 기반 자동 수집",
-          detail: "키워드 기반으로 스토어 정보를 자동 수집하는 시스템 구축. 네이버 검색 API를 활용해 스토어명, 주소, 연락처 등을 수집하고 데이터베이스에 저장했습니다."
+          detail: "키워드 검색 시 네이버 API로 스마트스토어만 필터링(site:smartstore.naver.com)하여 수집. HTML 태그 제거 및 URL 정규화를 통해 데이터를 정제하고, 기존 DB와 비교하여 중복 제거 후 저장했습니다."
         },
         {
           subtitle: "JPA Specification 기반 고급 검색",
@@ -192,7 +192,7 @@ export const workExperienceProjects = [
         },
         {
           subtitle: "이메일/메시지 일괄 발송",
-          detail: "선택한 스토어 목록에 이메일과 메시지를 일괄 발송하는 기능 구현. 템플릿 기반 메시지 작성과 발송 이력 관리를 통해 영업 효율을 향상시켰습니다."
+          detail: "회원별 이메일/메시지 템플릿 저장 및 재사용 기능 구현. JWT 토큰 기반 수신거부 링크를 자동 생성하고, URL을 앵커 태그로 변환하는 등 HTML 콘텐츠를 자동 처리했습니다. 발송 이력을 별도 테이블에 기록하여 추적 가능하도록 설계했습니다."
         }
       ]
     },
