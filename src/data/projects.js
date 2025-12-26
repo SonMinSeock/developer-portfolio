@@ -112,7 +112,7 @@ export const experience = {
     },
     {
       title: "RAG 챗봇 API (Backend)",
-      detail: "GPT-4o-mini 기반 고객지원 챗봇 백엔드 개발. 하이브리드 PDF 파싱으로 테이블 정확도 95% 달성, 대화 맥락 기반 쿼리 재작성, SSE 스트리밍 응답 구조 개선, 문서 로딩 성능 30배 향상(5분→10초)을 구현했습니다."
+      detail: "GPT-4o-mini + LangChain 기반 RAG 챗봇 백엔드 개발. Upstage API로 PDF/HWP/이미지 문서 처리, 대화 맥락 기반 쿼리 재작성, 펀딩 유형 자동 분류(신뢰도 0.7 이하 시 되묻기), ChromaDB 메타데이터 필터링, SSE 스트리밍 응답을 구현했습니다."
     }
   ]
 };
@@ -218,36 +218,47 @@ export const workExperienceProjects = [
 
     problem: {
       title: "문제 상황",
-      description: "크라우드펀딩 플랫폼 가이드 문서(PDF)가 200페이지 이상으로 방대하여 고객이 필요한 정보를 찾기 어려웠습니다. 기존 PDF 파싱 방식은 테이블 추출 정확도가 낮았고, 문서 로딩에 5분 이상 소요되어 실시간 응답이 불가능했습니다."
+      description: "크라우드펀딩 플랫폼 가이드 문서(PDF, HWP, 공지사항 등)가 200페이지 이상으로 방대하여 고객이 필요한 정보를 찾기 어려웠습니다. 특히 '후원형', '증권형', '광고' 등 펀딩 유형별로 다른 규정이 적용되어 잘못된 정보 제공 위험이 있었고, '그거는 어떻게 해요?'처럼 대화 맥락에 의존한 질문에는 검색이 실패했습니다."
     },
 
     solution: {
       title: "해결 방법",
       items: [
         {
-          subtitle: "하이브리드 PDF 파싱",
-          detail: "Camelot(테이블 전용)과 pymupdf4llm(텍스트 전용)을 결합한 하이브리드 파싱 방식 도입. 테이블 추출 정확도를 95%까지 향상시키고, 구조화된 데이터로 변환했습니다."
+          subtitle: "Upstage API 기반 멀티 포맷 문서 처리",
+          detail: "Upstage Document Parse API로 PDF/HWP를 Markdown으로 변환하고, OCR API로 이미지 문서를 텍스트화했습니다. 모든 문서에 메타데이터(제목, 출처 URL, 펀딩 유형)를 자동 추가하여 ChromaDB에 저장, 정확한 출처 추적이 가능해졌습니 다."
         },
         {
-          subtitle: "대화 맥락 기반 쿼리 재작성",
-          detail: "사용자의 질문과 이전 대화 기록을 GPT-4o-mini로 분석하여 독립적인 검색 쿼리로 재작성. 대화 흐름을 유지하면서도 정확한 문서 검색이 가능하게 했습니다."
+          subtitle: "LLM 기반 쿼리 전처리 파이프라인",
+          detail: "GPT-4o-mini로 질문 유효성 검사 → 대화 맥락 기반 쿼리 재작성 → 펀딩 유형 분류(신뢰도 0.7 이하 시 되묻기) → 동의어 확장 순으로 처리. '그거'를 '후원형 프로젝트 상세 페이지'로 재작성하고, '상세 페이지'에 '스토리' 동의어를  추가하여 검색 정확도를 높였습니다."
         },
         {
-          subtitle: "SSE 스트리밍 응답 및 성능 최적화",
-          detail: "Server-Sent Events를 활용한 실시간 스트리밍 응답 구조 개선. 문서 임베딩 캐싱과 배치 처리로 로딩 시간을 5분에서 10초로 30배 단축했습니다."
+          subtitle: "SSE 스트리밍 및 메타데이터 필터링",
+          detail: "Server-Sent Events로 토큰 단위 실시간 응답 구현. ChromaDB의 메타데이터 필터링으로 펀딩 유형별 문서만 검색하여 무관한 정보 제공을 방지했습니다. LangSmith 연동으로 사용자 피드백을 자동 수집하여 모델 개선 데이터로 활용했습  다."
         }
       ]
     },
 
     myRole: [
-      "Camelot + pymupdf4llm 기반 하이브리드 PDF 파싱 시스템 설계 및 구현",
-      "GPT-4o-mini를 활용한 대화 맥락 기반 쿼리 재작성 로직 개발",
-      "FAISS 기반 벡터 검색 및 RAG 파이프라인 구축",
-      "SSE 스트리밍 응답 구조 개선 및 성능 최적화",
-      "FastAPI 기반 RESTful API 설계 및 구현"
+      "Upstage Document Parse API 기반 PDF/HWP → Markdown 변환 파이프라인 구축",
+      "GPT-4o-mini를 활용한 쿼리 재작성 및 펀딩 유형 분류 로직 설계",
+      "ChromaDB + Upstage Solar-Embedding 기반 벡터 검색 시스템 구축",
+      "SSE 스트리밍 응답 및 LangChain LCEL 체인 구성",
+      "FastAPI 기반 RESTful API 설계 (대화 히스토리, 피드백 CRUD)",
+      "LangSmith 데이터셋 연동 및 평가 시스템 구축"
     ],
 
-    tech: ["Python", "FastAPI", "GPT-4o-mini", "FAISS", "Camelot", "pymupdf4llm", "SSE"],
+    tech: [
+      "Python",
+      "FastAPI",
+      "GPT-4o-mini",
+      "ChromaDB",
+      "LangChain",
+      "Upstage API",
+      "SSE",
+      "LangSmith",
+      "SQLAlchemy"
+    ],
 
     links: {}
   }
